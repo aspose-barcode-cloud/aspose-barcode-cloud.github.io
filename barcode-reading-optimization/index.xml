@@ -1,0 +1,152 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Documentation – Recognition Quality and Speed</title>
+    <link>https://aspose-barcode-cloud.github.io/barcode-reading-optimization/</link>
+    <description>Recent content in Recognition Quality and Speed on Documentation</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	  <atom:link href="https://aspose-barcode-cloud.github.io/barcode-reading-optimization/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Developer-Guide: Recognition Quality Options and Presets</title>
+      <link>https://aspose-barcode-cloud.github.io/barcode-recognition-presets/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://aspose-barcode-cloud.github.io/barcode-recognition-presets/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;overview&#34;&gt;&lt;strong&gt;Overview&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;Barcode reading relies on machine vision mechanisms and uses various mathematical algorithms for object detection. Same as in other computer vision tasks, source image quality is crucial to convert an arbitrary image to machine-readable code. Low-quality barcode images may result being unreadable depending on specific recognition standards. There are different approaches to read barcodes of unacceptable quality. However, running such methods takes extra CPU computation time and may lead to the considerable increase in recognition time.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Aspose.BarCode for Cloud&lt;/strong&gt;&lt;/em&gt; suggests optimizing the recognition process in terms of quality and speed in line with specific business needs. A special class called &lt;em&gt;QualitySettings&lt;/em&gt; provides flexible recognition settings to achieve the acceptable trade-off between reading acuracy and speed depending the quality of a source barcode image.&lt;/p&gt;
+&lt;h2 id=&#34;recognition-speed-and-quality-options-and-presets&#34;&gt;&lt;strong&gt;Recognition Speed and Quality Options and Presets&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;As stated above, &lt;em&gt;&lt;strong&gt;Aspose.BarCode for Cloud&lt;/strong&gt;&lt;/em&gt; contains class &lt;em&gt;QualitySettings&lt;/em&gt; that is used to enable and disable various algorithms to read barcodes with damages or artifacts. See the article &lt;strong&gt;Recognition Specificities&lt;/strong&gt; for additional information about special recognition cases. In addition, class &lt;em&gt;QualitySettings&lt;/em&gt; allows customizing the trade-off between recognition quality and speed in common cases. Corresponding methods are grouped into dedicated presets that allow improving image recovery and barcode reading for various scenarios.&lt;/p&gt;
+&lt;h2 id=&#34;recognition-presets&#34;&gt;&lt;strong&gt;Recognition Presets&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;In this section, supported recognition presets are described, including &lt;em&gt;HighPerformance&lt;/em&gt;, &lt;em&gt;NormalQuality&lt;/em&gt;, &lt;em&gt;HighQuality&lt;/em&gt;, &lt;em&gt;MaxBarCodes&lt;/em&gt;, and others, as represented in the table below. By default, the &lt;em&gt;NormalQuality&lt;/em&gt; preset is applied.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Recognition Preset&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;em&gt;NormalQuality&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;Suitable for regular-quality barcode images&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;em&gt;HighQuality&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;Intended for low-quality barcode images. It allows scanning diagonal and severely damaged barcode images&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;em&gt;HighPerformance&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;Used for high-quality barcode images&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;em&gt;HighQualityDetection&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;Same as &lt;em&gt;NormalQuality&lt;/em&gt; but with the &lt;em&gt;setDetectorSettings&lt;/em&gt; method called passing the &lt;em&gt;HighQuality&lt;/em&gt; value&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;em&gt;MaxQualityDetection&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;Same as &lt;em&gt;NormalQuality&lt;/em&gt; but with the &lt;em&gt;setDetectorSettings&lt;/em&gt; method called using the &lt;em&gt;MaxQuality&lt;/em&gt; value. It allows detecting diagonal and damaged barcode images&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;em&gt;MaxBarcodes&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;Allows scanning all barcodes possibly presented in an image, including invalid ones. It is recommended for debugging tasks only&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;universal-presets-for-all-barcode-types&#34;&gt;&lt;strong&gt;Universal Presets for All Barcode Types&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Aspose.BarCode for Cloud&lt;/strong&gt;&lt;/em&gt; suggests various universal recognition presets and corresponding methods to activate them, such as &lt;em&gt;setHighPerformance&lt;/em&gt;, &lt;em&gt;setNormalQuality&lt;/em&gt;, and &lt;em&gt;setHighQuality&lt;/em&gt;. These presets establish linear dependence between reading accuracy and speed for all barcode types. Generally, using the default &lt;em&gt;NormalQuality&lt;/em&gt; preset is sufficient for most of barcodes that have acceptable scanning quality.&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;&lt;img src=&#34;barcodes_different_quality.png&#34; height=&#34;45%&#34; width=&#34;45%&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;presets-for-1d-barcode-types&#34;&gt;&lt;strong&gt;Presets for 1D Barcode Types&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;To scan linear barcodes, &lt;em&gt;&lt;strong&gt;Aspose.BarCode for Cloud&lt;/strong&gt;&lt;/em&gt; allows using dedicated recognition presets suitable for normal-quality barcodes. These presets provide improved methods for 1D barcode detection and decoding and are useful to work with barcodes of small dimensions or complex documents with multiple text blocks and tables. For example, compared with general recognition settings, &lt;em&gt;HighQualityDetection&lt;/em&gt; and &lt;em&gt;MaxQualityDetection&lt;/em&gt; presets allow improving recognition results for 1D barcodes in complex documents. Alternatilvely, such improvement can be implemented using the &lt;em&gt;NormalQuality&lt;/em&gt; preset and tuning &lt;em&gt;BarcodeSvmDetectorSettings&lt;/em&gt; through the &lt;em&gt;setDetectorSettings&lt;/em&gt; method.&lt;/p&gt;
+&lt;p&gt;The image shown below is a sample document with multiple barcodes that contains also text parts and figures.&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;&lt;img src=&#34;many_code128.png&#34; height=&#34;45%&#34; width=&#34;45%&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;using-maxbarcodes-preset-for-debugging&#34;&gt;&lt;strong&gt;Using &lt;em&gt;&lt;strong&gt;MaxBarCodes&lt;/strong&gt;&lt;/em&gt; Preset for Debugging&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;To detect all possible barcodes in an image including invalid ones, &lt;em&gt;&lt;strong&gt;Aspose.BarCode for Cloud&lt;/strong&gt;&lt;/em&gt; contains a special preset called &lt;em&gt;MaxBarCodes&lt;/em&gt;. This preset allows restoring up to 1% more barcodes (severely damaged or incorrectly generated) in comparison with the results that can be reached by the &lt;em&gt;NormalQuality&lt;/em&gt; preset. Similar reading settings can be implemented through the &lt;em&gt;setAllowIncorrectBarcodes&lt;/em&gt; method.
+The &lt;em&gt;MaxBarCodes&lt;/em&gt; preset may be used to scan even unreadable barcodes; however, it is intended for debugging tasks only as it may result in considerably augmenting the time needed to complete the reading process and providing invalid decoding outputs. This preset is suggested only for advanced users of the &lt;em&gt;&lt;strong&gt;Aspose.BarCode&lt;/strong&gt;&lt;/em&gt; library.&lt;/p&gt;
+&lt;h2 id=&#34;recognition-options&#34;&gt;&lt;strong&gt;Recognition Options&lt;/strong&gt;&lt;/h2&gt;
+&lt;h3 id=&#34;fast-detection-for-high-quality-barcode-images&#34;&gt;&lt;strong&gt;Fast Detection for High-Quality Barcode Images&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;To recognize high-quality 1D barcodes created through web-based applications, it is suggested to use &lt;em&gt;setAllowOneDFastBarcodesDetector&lt;/em&gt; and &lt;em&gt;setFastScanOnly&lt;/em&gt; reading methods. These methods enable fast scanning of target image areas through lightweight scanning techniques. The difference between these two options is that the &lt;em&gt;setFastScanOnly&lt;/em&gt; method does not enable further barcode search after the failure to idetify more barcodes through lightweight scanning methods.&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;&lt;img src=&#34;code128_hq.png&#34; height=&#34;20%&#34; width=&#34;20%&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;regular-recognition-of-barcode-images-without-damage&#34;&gt;&lt;strong&gt;Regular Recognition of Barcode Images without Damage&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;To decode regular norma-quality barcode images, &lt;em&gt;&lt;strong&gt;Aspose.BarCode for Cloud&lt;/strong&gt;&lt;/em&gt; applies a method called &lt;em&gt;setAllowRegularImage&lt;/em&gt; that uses standard recognition techniques. This mode is suggested to be enabled in most cases, as its deactivation may lead to decoding failures for regular barcode images.&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;&lt;img src=&#34;aztec_regular_inverse.png&#34; width=&#34;20%&#34; heigh=&#34;20%&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;detection-of-areas-with-potential-barcodes&#34;&gt;&lt;strong&gt;Detection of Areas with Potential Barcodes&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;To read barcodes, &lt;em&gt;&lt;strong&gt;Aspose.BarCode for Cloud&lt;/strong&gt;&lt;/em&gt; first performs the segmentation of a source image and finds areas with potential barcodes. Two barcode region detectors are available: the one with flexible sensitivity implemented in a class called &lt;em&gt;BarcodeSvmDetectorSettings&lt;/em&gt; and the other one that relies on the previous detector version that allows correctly identifying about 97% of barcodes without the need in additional settings. &lt;em&gt;BarcodeSvmDetectorSettings&lt;/em&gt; is used by default together with calling the &lt;em&gt;setNormalQuality&lt;/em&gt; method.&lt;/p&gt;
+&lt;h3 id=&#34;barcode-detector-with-flexible-sensibility&#34;&gt;&lt;strong&gt;Barcode Detector with Flexible Sensibility&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;BarcodeSvmDetectorSettings&lt;/em&gt; allows adjusting the sensitivity of the barcode detector in a flexible manner according to specific needs. The better is the detector sensitivity, the lower is reading speed and the better are the results of barcode region detection in complex source images with many text blocks and tables. For 1D barcodes, &lt;em&gt;BarcodeSvmDetectorSettings&lt;/em&gt; supports the following sensitivity settings:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;NormalQuality&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;HighQuality&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;HighPerformance&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;MaxQuality&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;previous-version-of-barcode-detector&#34;&gt;&lt;strong&gt;Previous Version of Barcode Detector&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;The &lt;em&gt;setUseOldBarcodeDetector&lt;/em&gt; method allows performing barcode region detection for 1D barcodes using the previous detector version that does not support flexible sensitivity settings. This region detection mode is close to &lt;em&gt;NormalQuality&lt;/em&gt; and &lt;em&gt;HighQuality&lt;/em&gt; modes of the new detector implemented in &lt;em&gt;BarcodeSvmDetectorSettings&lt;/em&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;managing-scan-gap-during-1d-and-2d-barcode-scanning&#34;&gt;&lt;strong&gt;Managing Scan Gap during 1D and 2D Barcode Scanning&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;To conduct preliminary detection of large-sized 1D and some 2D types, such as &lt;em&gt;QR Code&lt;/em&gt;, &lt;em&gt;PDF417&lt;/em&gt;, or &lt;em&gt;Aztec Code&lt;/em&gt;, barcode scanning can be applied with a gap of several lines. This option is intended to avoid unaccaptably long scanning and allows speeding up the decoding process. &lt;em&gt;&lt;strong&gt;Aspose.BarCode for Cloud&lt;/strong&gt;&lt;/em&gt; supports a special method called &lt;em&gt;setAllowDetectScanGap&lt;/em&gt; to enable the scan gap. However, if large-sized and tiny barcodes are displayed in an image close to each other, applying this recognition option can lead to a failure to read smaller-sized barcode. When this option is not enabled, reading such combinations of barcodes can be executed successfully at the expense of recognition speed.&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;&lt;img src=&#34;code128_big_and_small.png&#34; width=&#34;25%&#34; height=&#34;25%&#34;&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Developer-Guide: Special Recognition Cases</title>
+      <link>https://aspose-barcode-cloud.github.io/special-recognition-features/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://aspose-barcode-cloud.github.io/special-recognition-features/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;barcode-images-with-gaussian-noise&#34;&gt;&lt;strong&gt;Barcode Images with Gaussian Noise&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;Gaussian noise is one of the most common damages that may deteriorate the quality of a source barcode. Most of difficulties correspond to the cases when barcode images have the monochrome color scheme or the distortion grain is considerably bigger than the minimal element of a barcode. To cope with these effects, median filtering mechanisms suitable for both 1D and 2D symbologies can be applied. Median filtering mechanisms also affect image quality due to the possible removal of some barcode elements together with noise; however, they still may be helpful in improving readability of key barcode modules.&lt;/p&gt;
+&lt;h3 id=&#34;median-filtering-for-2d-barcodes&#34;&gt;&lt;strong&gt;Median Filtering for 2D Barcodes&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;In &lt;em&gt;&lt;strong&gt;Aspose.BarCode for Cloud&lt;/strong&gt;&lt;/em&gt;, median filtering can be implemented using a special method called &lt;em&gt;setAllowMedianSmoothing&lt;/em&gt; and setting the median filtering window using the &lt;em&gt;setMedianSmoothingWindowSize&lt;/em&gt; method. Unlike 1D barcodes, automated selection of a suitable median filtering window is not supported for 2D types.&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;&lt;img src=&#34;datamatrix_noised.png&#34; width=&#34;15%&#34; height=&#34;15%&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;median-filtering-for-1d-barcodes&#34;&gt;&lt;strong&gt;Median Filtering for 1D Barcodes&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;One-dimensional filtering for linear barcodes can be set using a method called &lt;em&gt;setAllowSaltAndPaperFiltering&lt;/em&gt;. In this case, the filtering window size is selected automatically.&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;&lt;img src=&#34;saltandpaper.png&#34; width=&#34;30%&#34; height=&#34;30%&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;median-filtering-for-postal-barcodes&#34;&gt;&lt;strong&gt;Median Filtering for Postal Barcodes&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;One-dimensional median filtering for postal symbologies can be performed using the &lt;em&gt;AllowMicroWhiteSpotsRemoving&lt;/em&gt; method. The size of the filtering window is set automatically.&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;&lt;img src=&#34;planet_noised.png&#34; width=&#34;40%&#34; height=&#34;40%&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;filtering-out-white-spots&#34;&gt;&lt;strong&gt;Filtering Out White Spots&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;The presence of white spots in barcode images is a frequent problem that appears while sending documents with barcodes through fax transmission. To mitigate this issue in &lt;em&gt;&lt;strong&gt;Aspose.BarCode for Cloud&lt;/strong&gt;&lt;/em&gt;, it is possible to use a special method called &lt;em&gt;setAllowWhiteSpotsRemoving&lt;/em&gt; that allows filtering out not all Gaussian noise but only white spots.&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;&lt;img src=&#34;code128_whitespots.png&#34; width=&#34;30%&#34; height=&#34;30%&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;reducing-barcode-image-size-to-eliminate-visual-artifacts&#34;&gt;&lt;strong&gt;Reducing Barcode Image Size to Eliminate Visual Artifacts&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;In some cases, distortions caused by excessive scaling of a barcode image can be mitigated by reducing the scale space. In &lt;em&gt;&lt;strong&gt;Aspose.BarCode for Cloud&lt;/strong&gt;&lt;/em&gt;, it can be done using a special method called &lt;em&gt;setAllowDecreasedImage&lt;/em&gt;. Its purpose is to reduce the size of an image and in this way, to facilitate barcode reading by eliminating visual artifacts.&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;&lt;img src=&#34;datamatrix_waved.png&#34; width=&#34;20%&#34; height=&#34;20%&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;reading-inverted-barcode-images&#34;&gt;&lt;strong&gt;Reading Inverted Barcode Images&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Aspose.BarCode for Cloud&lt;/strong&gt;&lt;/em&gt; enables reading barcode images with inverted colors. To do this, it is required to enable a special method called &lt;em&gt;setAllowInvertImage&lt;/em&gt;.&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;&lt;img src=&#34;aztec_regular_inverse.png&#34; width=&#34;20%&#34; height=&#34;20%&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;detecting-colored-barcodes-on-colored-background&#34;&gt;&lt;strong&gt;Detecting Colored Barcodes on Colored Background&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;To read colored barcodes on a colored background, &lt;em&gt;&lt;strong&gt;Aspose.BarCode for Cloud&lt;/strong&gt;&lt;/em&gt; provides a special method called &lt;em&gt;setAllowComplexBackground&lt;/em&gt; that attempts to distinguish the colored background from barcode labels through color quantization and then subtract it. It should be noted that enabling this parameter results in considerable deceleration of recognition speed and thus should be used in special cases only.&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;&lt;img src=&#34;qr_color.png&#34; width=&#34;15%&#34; height=&#34;15%&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;reading-barcodes-with-erased-or-displaced-bars&#34;&gt;&lt;strong&gt;Reading Barcodes with Erased or Displaced Bars&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;While scanning or sending barcode images using fax transmission, the problem of displaced or erased bars in 1D barcode labels often appears, especially, in those printed out using ink-jet printers. To resolve this issue, &lt;em&gt;&lt;strong&gt;Aspose.BarCode for Cloud&lt;/strong&gt;&lt;/em&gt; provides two methods called &lt;em&gt;setAllowOneDWipedBarsRestoration&lt;/em&gt; and &lt;em&gt;setCheckMore1DVariants&lt;/em&gt; that allow selecting the most suitable recognition option according to the checksum value and other barcode elements. However, it should be noted that enabling these settings may result in incorrect recognition of 1D barcodes.&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;&lt;img src=&#34;code128_wipedbars.png&#34; width=&#34;40%&#34; height=&#34;40%&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;reading-evidently-incorrect-barcodes&#34;&gt;&lt;strong&gt;Reading Evidently Incorrect Barcodes&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;In cases when it is necessary just to detect the presence of barcodes regardless of their validity and corresponding recognition correctness, it is possible to enable two special settings called &lt;em&gt;setAllowIncorrectBarcodes&lt;/em&gt; and &lt;em&gt;setReadTinyBarcodes&lt;/em&gt;. The first one is used to attempt performing partial barcode recognition even if the reading process has provided incorrect results; in this case, the barcode data is decoded with &lt;em&gt;BarCodeConfidence&lt;/em&gt; being set to &lt;em&gt;None&lt;/em&gt;, which means that the correctness of recognition is not guaranteed.&lt;/p&gt;
+&lt;p&gt;The &lt;em&gt;setReadTinyBarcodes&lt;/em&gt; method facilitates reading small barcode labels in large images. It is ignored if the &lt;em&gt;setAllowIncorrectBarcodes&lt;/em&gt; method is called passing the &lt;em&gt;True&lt;/em&gt; value. However, enabling this parameter may result in recognizing false barcodes in place of actual text or tables.&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;&lt;img src=&#34;pdf417_qr_corrupted.png&#34; width=&#34;30%&#34; height=&#34;30%&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;reading-severely-distorted-qr-codes-and-micro-qr-codes&#34;&gt;&lt;strong&gt;Reading Severely Distorted QR Codes and Micro QR Codes&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Aspose.BarCode for Cloud&lt;/strong&gt;&lt;/em&gt; allows reading severely corrupted &lt;em&gt;QR Code&lt;/em&gt; and &lt;em&gt;Micro QR Code&lt;/em&gt; labels. This can be enabled by setting the &lt;em&gt;setAllowQRMicroQrRestoration&lt;/em&gt; parameter.&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;&lt;img src=&#34;microqr_3d_distorted.png&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;reading-industrial-data-matrix-barcodes&#34;&gt;&lt;strong&gt;Reading Industrial Data Matrix Barcodes&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;Industrial &lt;em&gt;Data Matrix&lt;/em&gt; barcodes often have dotted patterns or other decoration elements and are placed onto metallic surfaces, in this way, creating embossed indelible barcode labels. To facilitate the recognition of such barcodes, it is possible to enable a special parameter called &lt;em&gt;setAllowDatamatrixIndustrialBarcodes&lt;/em&gt; that allows reading dashed labels in a slow mode.&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;&lt;img src=&#34;datamatrix_industrial.png&#34; width=&#34;30%&#34; height=&#34;30%&#34;&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

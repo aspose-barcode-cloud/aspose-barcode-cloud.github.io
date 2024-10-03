@@ -1,0 +1,676 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Documentation – Manage and Optimize Barcode Recognition in Cloud</title>
+    <link>https://aspose-barcode-cloud.github.io/managing-and-optimizing-barcode-recognition/</link>
+    <description>Recent content in Manage and Optimize Barcode Recognition in Cloud on Documentation</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	  <atom:link href="https://aspose-barcode-cloud.github.io/managing-and-optimizing-barcode-recognition/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Developer-Guide: Barcode Recognition Basics</title>
+      <link>https://aspose-barcode-cloud.github.io/barcode-recognition-basics/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://aspose-barcode-cloud.github.io/barcode-recognition-basics/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;overview&#34;&gt;&lt;strong&gt;Overview&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;Model &lt;em&gt;ReaderParams&lt;/em&gt; represents &lt;em&gt;BarCodeReader&lt;/em&gt; objects in &lt;em&gt;&lt;strong&gt;Aspose.BarCode for Cloud&lt;/strong&gt;&lt;/em&gt;. First, it is necessary to indentify a barcode source that can be represented as a file, a stream, or a bitmap object. After that, target barcode types need to be specified using values from the &lt;em&gt;DecodeType&lt;/em&gt; enum. By default, the library uses the &lt;em&gt;DecodeType.ALL_SUPPORTED_TYPES&lt;/em&gt; setting that implies iterating over all supported barcode types to check for their presence in the source image. In this case, barcode scanning and recognition takes much more time. Developers can specify explicitly not only the desired symbologies but also a target region or regions in the source image. This allows optimizing the scanning process by avoiding areas without barcodes. Target regions can be determined using a system class called &lt;em&gt;Rectangle&lt;/em&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;main-recognition-parameters&#34;&gt;&lt;strong&gt;Main Recognition Parameters&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;In &lt;em&gt;&lt;strong&gt;Aspose.BarCode for Cloud&lt;/strong&gt;&lt;/em&gt;, barcode reading is performed according to the following steps:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Determine the barcode source (image file, stream, or bitmap), e.g. set the path to a source image&lt;/li&gt;
+&lt;li&gt;Select target barcode types. &lt;em&gt;DecodeType&lt;/em&gt; is set to &lt;em&gt;DecodeType.ALL_SUPPORTED_TYPES&lt;/em&gt; by default meaning that the sources image will be scanned to search for all supported barcode types; in this case, time required to finish the barcode detection process will increase.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Aspose.BarCode for Cloud&lt;/strong&gt;&lt;/em&gt; contains the &lt;em&gt;ReadBarCodes&lt;/em&gt; metho that returns the result of barcode reading in an array of the &lt;em&gt;BarCodeResult&lt;/em&gt; type.&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;&lt;img src=&#34;multiple_codes.png&#34; hight=&#34;50%&#34; width=&#34;50%&#34;&gt;&lt;/p&gt;  
+&lt;h2 id=&#34;getting-recognition-results&#34;&gt;&lt;strong&gt;Getting Recognition Results&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;To load barcode recognition outputs, it is needed to call the &lt;em&gt;ReadBarCodes&lt;/em&gt; method that provides a &lt;em&gt;BarCodeResult&lt;/em&gt; array. Moreover, the current recognition output can be accessed through the &lt;em&gt;getFoundBarCodes&lt;/em&gt; method that enables fetching decoding results or the &lt;em&gt;getFoundCount&lt;/em&gt; method that returns the number of detected barcodes.&lt;/p&gt;
+&lt;h2 id=&#34;barcode-recognition-source&#34;&gt;&lt;strong&gt;Barcode Recognition Source&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;In &lt;em&gt;&lt;strong&gt;Aspose.BarCode for Cloud&lt;/strong&gt;&lt;/em&gt;, there are three ways to set the barcode recognition source: from an image file, from a bitmap, or from a stream. The following five raster image formats are supported: PNG, JPEG, BMP, TIFF, or GIF. Three options to set the source for barcodes reading are explained further.&lt;/p&gt;
+&lt;h3 id=&#34;read-barcodes-from-files&#34;&gt;&lt;strong&gt;Read Barcodes from Files&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;First of all, barcodes can be scanned and recognized from image files. The full or relative path to the source needs to be specified in the &lt;em&gt;BarCodeReader&lt;/em&gt; constructor. Alternatively, the &lt;em&gt;setBarCodeImage&lt;/em&gt; method can be used to pass the path to the existing object of class &lt;em&gt;BarCodeReader&lt;/em&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;read-barcodes-from-bitmap-objects&#34;&gt;&lt;strong&gt;Read Barcodes from Bitmap Objects&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;It is possible to use a graphical object or a bitmap as a source for barcode reading. Bitmap objects allow working with images consisting of pixel data. To read barcodes from a bitmap, the created bitmap object needs to be passed to the &lt;em&gt;BarCodeReader()&lt;/em&gt; constructor or the &lt;em&gt;setBarCodeImage&lt;/em&gt; method.&lt;/p&gt;
+&lt;h3 id=&#34;read-barcodes-from-streams&#34;&gt;&lt;strong&gt;Read Barcodes from Streams&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;A stream (in a binary format) can be also used as a source for barcode recognition. This option can be useful in some situations owing to its versatility and accessibility without file systems. A stream to read barcodes from needs to be passed to the &lt;em&gt;BarCodeReader()&lt;/em&gt; constructor or the &lt;em&gt;setBarCodeImage&lt;/em&gt; method.&lt;/p&gt;
+&lt;h2 id=&#34;setting-target-barcode-types&#34;&gt;&lt;strong&gt;Setting Target Barcode Types&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Aspose.BarCode for Cloud&lt;/strong&gt;&lt;/em&gt; supports barcode recognition for 60+ various barcode types. To improve the efficiency of the recognition process and optimize its timing, it is recommended to set target symbologies in advance. Otheriwse, the &lt;em&gt;DecodeType.ALL_SUPPORTED_TYPES&lt;/em&gt; setting of the &lt;em&gt;DecodeType&lt;/em&gt; enum will be used by default meaning that the library will look over all supported barcode types to check for their presence in the source image. Using this setting will increase the time needed to complete barcode recognition.&lt;/p&gt;
+&lt;h3 id=&#34;listing-target-barcode-types-in-decodetype&#34;&gt;&lt;strong&gt;Listing Target Barcode Types in DecodeType&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;Target barcode types can be specified by grouping them in a list and passing it to the &lt;em&gt;BarCodeReader()&lt;/em&gt; constructor or the &lt;em&gt;setBarCodeReadType&lt;/em&gt; method.&lt;/p&gt;
+&lt;h3 id=&#34;using-multydecodetype-mode&#34;&gt;Using &lt;strong&gt;&lt;em&gt;MultyDecodeType&lt;/em&gt; Mode&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;The other way to specify target barcode types is to determine them using a constructor of class &lt;em&gt;MultyDecodeType&lt;/em&gt; and then pass it to class &lt;em&gt;BarCodeReader&lt;/em&gt; or the &lt;em&gt;setBarCodeReadType&lt;/em&gt; method.&lt;/p&gt;
+&lt;h3 id=&#34;using-predefined-barcode-type-sets&#34;&gt;&lt;strong&gt;Using Predefined Barcode Type Sets&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;Class &lt;em&gt;DecodeType&lt;/em&gt; provides the following symbology setsfor barcode reading:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;ALL_SUPPORTED_TYPES&lt;/em&gt; - all available barcode types&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;TYPES_1D&lt;/em&gt; - all supported 1D types&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;TYPES_2D&lt;/em&gt; - all supported 2D types&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;POSTAL_TYPES&lt;/em&gt; - all available postal types&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;MOST_COMMON_TYPES&lt;/em&gt; - a set of most widespread barcode types defined according to Aspose recommendations&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The required set can be specified in the &lt;em&gt;BarCodeReader&lt;/em&gt; constructor or passed to the &lt;em&gt;setBarCodeReadType&lt;/em&gt; method.&lt;/p&gt;
+&lt;h2 id=&#34;setting-target-barcode-regions&#34;&gt;&lt;strong&gt;Setting Target Barcode Regions&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;Target areas for barcode detection can be specified by creating one or several objects of the &lt;em&gt;Rectangle&lt;/em&gt; type. Setting target regions allows improving recognition efficiency and avoiding the regions without any barcodes. Target areas have to be determined accurately as the Aspose library apply heuristic approaches to identify target barcode detection areas. Focusing on too many image regions can lead to recognition efficiency deterioration.&lt;/p&gt;
+&lt;h3 id=&#34;unique-target-region&#34;&gt;&lt;strong&gt;Unique Target Region&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;To set one target area for barcode recognition, it is necessary to create an object of the &lt;em&gt;Rectangle&lt;/em&gt; type and then pass it to the &lt;em&gt;BarCodeReader&lt;/em&gt; constructor or the &lt;em&gt;setBarCodeImage&lt;/em&gt; method.&lt;/p&gt;
+&lt;h3 id=&#34;several-target-regions&#34;&gt;&lt;strong&gt;Several Target Regions&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;It is also possible to set several target areas for barcode detection within the one source image. This can be done in the same way as described above for one target region, i.e., using the &lt;em&gt;BarCodeReader&lt;/em&gt; constructor or the &lt;em&gt;setBarCodeImage&lt;/em&gt; method.&lt;/p&gt;
+&lt;h2 id=&#34;recognition-abortion-through-manual-and-timeout-methods&#34;&gt;&lt;strong&gt;Recognition Abortion through Manual and Timeout Methods&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;Class &lt;em&gt;BarCodeReader&lt;/em&gt; enables two special methods to stop the recognition process if it becomes unfeasible to complete. The first one is the &lt;em&gt;setTimeOut&lt;/em&gt; method that can be called to interrupt the barcode reading process immediately after the timeout value gets exceeded. By default, the &lt;em&gt;TimeOut&lt;/em&gt; value is set to 0.&lt;/p&gt;
+&lt;p&gt;The second way is to use the &lt;em&gt;abort()&lt;/em&gt; method. This option is used if the recognition process has been launched in the other thread. This method does not stop the entire process and returns controls immediately.&lt;/p&gt;
+&lt;p&gt;Both aforementioned methods throw an exception called &lt;em&gt;RecognitionAbortedException&lt;/em&gt; if the recognition process could not be finished successfully.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Developer-Guide: Manage and Optimize a Barcode Recognition Using Cloud Storage</title>
+      <link>https://aspose-barcode-cloud.github.io/manage-and-optimize-a-barcode-recognition-using-cloud-storage/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://aspose-barcode-cloud.github.io/manage-and-optimize-a-barcode-recognition-using-cloud-storage/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;introduction&#34;&gt;&lt;strong&gt;Introduction&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;Aspose.BarCode for Cloud has provided the simplest API to recognize a barcode and save it on Aspose Cloud Storage. This API can be used with any language: .NET, Java, PHP, Ruby, Rails, Python, jQuery and many more.&lt;/p&gt;
+&lt;h2 id=&#34;api-information&#34;&gt;&lt;strong&gt;API Information&lt;/strong&gt;&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;&lt;strong&gt;API&lt;/strong&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;&lt;strong&gt;Type&lt;/strong&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;&lt;strong&gt;Description&lt;/strong&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;&lt;strong&gt;Resource Link&lt;/strong&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;/barcode/{name}/recognize&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;GET&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Recognize barcode from a file on server&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;a href=&#34;https://apireference.aspose.cloud/barcode/#/Barcode/GetBarcodeRecognize&#34;&gt;GetBarcodeRecognize&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;curl-example&#34;&gt;&lt;strong&gt;cURL Example&lt;/strong&gt;&lt;/h3&gt;
+
+
+
+
+
+&lt;nav&gt;
+  &lt;div class=&#34;book-tabs nav nav-tabs&#34; id=&#34;nav-tab&#34; role=&#34;tablist&#34;&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-1&#34; id=&#34;tabs-1-1&#34; checked=&#34;checked&#34; /&gt;
+      &lt;label for=&#34;tabs-1-1&#34;&gt;Request&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// First get Access Token
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// Get Client Secret and Client Id from https://dashboard.aspose.cloud/
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;curl&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;v&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;https://api.aspose.cloud/oauth2/token&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;X&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;POST&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;d&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;grant_type&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;client_credentials&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;client_id&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;XXXXXXXXX&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;client_secret&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;XXXXXXXXX&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;H&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;Content-Type: application/x-www-form-urlencoded&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;H&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;Accept: application/json&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// cURL example to recognize a barcode
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;curl&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;v&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;https://api.aspose.cloud/v3.0/barcode/sample-barcode.png/recognize?type=Code128&amp;amp;format=png&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;X&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;GET&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;H&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;Content-Type: application/json&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;H&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;Accept: application/json&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-1&#34; id=&#34;tabs-1-2&#34;  /&gt;
+      &lt;label for=&#34;tabs-1-2&#34;&gt;Response&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;s&#34;&gt;&amp;#34;Barcodes&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;s&#34;&gt;&amp;#34;BarcodeValue&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;AsposeBarCode&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;s&#34;&gt;&amp;#34;BarcodeType&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;Code128&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;s&#34;&gt;&amp;#34;Region&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;s&#34;&gt;&amp;#34;16, 4&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;s&#34;&gt;&amp;#34;371, 4&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;s&#34;&gt;&amp;#34;371, 60&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;s&#34;&gt;&amp;#34;16, 60&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;o&#34;&gt;],&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;s&#34;&gt;&amp;#34;Checksum&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;o&#34;&gt;],&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;s&#34;&gt;&amp;#34;Code&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;200&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;s&#34;&gt;&amp;#34;Status&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;OK&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;/nav&gt;
+
+&lt;h2 id=&#34;sdks&#34;&gt;&lt;strong&gt;SDKs&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt; Using an SDK (API client) is the quickest way for a developer to speed up the development. An SDK takes care of a lot of low-level details of making requests and handling responses and lets you focus on writing code specific to your particular project. Checkout our &lt;a href=&#34;https://github.com/aspose-barcode-cloud&#34;&gt;GitHub repository&lt;/a&gt; for a complete list of Aspose.BarCode SDKs along with working examples, to get you started in no time.&lt;/p&gt;
+&lt;h3 id=&#34;sdk-examples&#34;&gt;&lt;strong&gt;SDK Examples&lt;/strong&gt;&lt;/h3&gt;
+&lt;h4 id=&#34;read-barcode-from-aspose-cloud-storage&#34;&gt;&lt;strong&gt;Read Barcode from Aspose Cloud Storage&lt;/strong&gt;&lt;/h4&gt;
+
+
+
+
+
+&lt;nav&gt;
+  &lt;div class=&#34;book-tabs nav nav-tabs&#34; id=&#34;nav-tab&#34; role=&#34;tablist&#34;&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-4&#34; id=&#34;tabs-4-1&#34; checked=&#34;checked&#34; /&gt;
+      &lt;label for=&#34;tabs-4-1&#34;&gt;C#&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/6870ff02a0a2f99a9206163f5e6df7e2.js&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-4&#34; id=&#34;tabs-4-2&#34;  /&gt;
+      &lt;label for=&#34;tabs-4-2&#34;&gt;Java&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/7478c19a65c3463f5aee7cf4455f7beb.js&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-4&#34; id=&#34;tabs-4-3&#34;  /&gt;
+      &lt;label for=&#34;tabs-4-3&#34;&gt;PHP&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/7dd7c6f477aeb4eabd1afc57e6913ccd.js?file=Example-RecognizeBarcodeFromStorage.php&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-4&#34; id=&#34;tabs-4-4&#34;  /&gt;
+      &lt;label for=&#34;tabs-4-4&#34;&gt;Python&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/6275bcdea343576fc9dd39c66d8b92e5.js&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-4&#34; id=&#34;tabs-4-5&#34;  /&gt;
+      &lt;label for=&#34;tabs-4-5&#34;&gt;Node.js&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/3d80ec0b502975afa622577a2ca7bf0a.js?file=Example-RecognizeBarcodeFromStorage.ts&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-4&#34; id=&#34;tabs-4-6&#34;  /&gt;
+      &lt;label for=&#34;tabs-4-6&#34;&gt;Go&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/6cd164837c89ec2bae69022d847eac51.js&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;&lt;/div&gt;
+&lt;/nav&gt;
+
+&lt;h4 id=&#34;read-barcode-from-specific-region-of-image&#34;&gt;&lt;strong&gt;Read Barcode from Specific Region of Image&lt;/strong&gt;&lt;/h4&gt;
+
+
+
+
+
+&lt;nav&gt;
+  &lt;div class=&#34;book-tabs nav nav-tabs&#34; id=&#34;nav-tab&#34; role=&#34;tablist&#34;&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-5&#34; id=&#34;tabs-5-1&#34; checked=&#34;checked&#34; /&gt;
+      &lt;label for=&#34;tabs-5-1&#34;&gt;C#&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/831a237fc1340791fe99fac370250491.js&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-5&#34; id=&#34;tabs-5-2&#34;  /&gt;
+      &lt;label for=&#34;tabs-5-2&#34;&gt;Java&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/3f5d042567f7853c4ae3dc39af7f2454.js&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-5&#34; id=&#34;tabs-5-3&#34;  /&gt;
+      &lt;label for=&#34;tabs-5-3&#34;&gt;PHP&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/7dd7c6f477aeb4eabd1afc57e6913ccd.js?file=Example-ReadBarcodeFromSpecificRegion.php&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-5&#34; id=&#34;tabs-5-4&#34;  /&gt;
+      &lt;label for=&#34;tabs-5-4&#34;&gt;Python&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/183dbbf55f51d5227c22d887fbf7691c.js&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-5&#34; id=&#34;tabs-5-5&#34;  /&gt;
+      &lt;label for=&#34;tabs-5-5&#34;&gt;Node.js&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/3d80ec0b502975afa622577a2ca7bf0a.js?file=Example-ReadBarcodeFromSpecificRegion.ts&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-5&#34; id=&#34;tabs-5-6&#34;  /&gt;
+      &lt;label for=&#34;tabs-5-6&#34;&gt;Go&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/cb77f0513d354454cb992cfbb5107d3d.js&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;&lt;/div&gt;
+&lt;/nav&gt;
+
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Developer-Guide: Manage and Optimize a Barcode Recognition Without Cloud Storage</title>
+      <link>https://aspose-barcode-cloud.github.io/manage-and-optimize-a-barcode-recognition-without-cloud-storage/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://aspose-barcode-cloud.github.io/manage-and-optimize-a-barcode-recognition-without-cloud-storage/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;introduction&#34;&gt;&lt;strong&gt;Introduction&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;Aspose.BarCode for Cloud provided the simplest API which lets you recognize a barcode from file on the server with parameters in the request body. This API can be used with any language: .NET, Java, PHP, Ruby, Rails, Python, jQuery and many more.&lt;/p&gt;
+&lt;h2 id=&#34;api-information&#34;&gt;&lt;strong&gt;API Information&lt;/strong&gt;&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;&lt;strong&gt;API&lt;/strong&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;&lt;strong&gt;Type&lt;/strong&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;&lt;strong&gt;Description&lt;/strong&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;&lt;strong&gt;Resource Link&lt;/strong&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;/barcode/recognize&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;POST&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Recognize barcode from an url or from request body. Request body can contain raw data bytes of the image or encoded with base64&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;a href=&#34;https://apireference.aspose.cloud/barcode/#/Barcode/PostBarcodeRecognizeFromUrlOrContent&#34;&gt;PostBarcodeRecognizeFromUrlOrContent&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;curl-example&#34;&gt;&lt;strong&gt;cURL Example&lt;/strong&gt;&lt;/h3&gt;
+
+
+
+
+
+&lt;nav&gt;
+  &lt;div class=&#34;book-tabs nav nav-tabs&#34; id=&#34;nav-tab&#34; role=&#34;tablist&#34;&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-1&#34; id=&#34;tabs-1-1&#34; checked=&#34;checked&#34; /&gt;
+      &lt;label for=&#34;tabs-1-1&#34;&gt;Request&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// First get Access Token
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// Get Client Secret and Client Id from https://dashboard.aspose.cloud/
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;curl&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;v&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;https://api.aspose.cloud/oauth2/token&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;X&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;POST&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;d&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;grant_type&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;client_credentials&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;client_id&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;XXXXXXXXX&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;client_secret&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;XXXXXXXXX&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;H&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;Content-Type: application/x-www-form-urlencoded&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;H&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;Accept: application/json&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// cURL example to generate barcode and recognize a barcode from file on the server with parameters in the request body
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;curl&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;v&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;https://api.aspose.cloud/v3.0/barcode/recognize?Type=Code128&amp;amp;ChecksumValidation=On&amp;amp;url=http%3A%2F%2Fwww.barcoding.com%2Fimages%2FBarcodes%2Fcode93.gif&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;X&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;POST&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;H&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;Content-Type: application/json&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;H&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;Accept: application/json&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-1&#34; id=&#34;tabs-1-2&#34;  /&gt;
+      &lt;label for=&#34;tabs-1-2&#34;&gt;Response&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;s&#34;&gt;&amp;#34;Barcodes&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;s&#34;&gt;&amp;#34;BarcodeValue&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;AsposeBarCode&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;s&#34;&gt;&amp;#34;BarcodeType&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;Code128&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;s&#34;&gt;&amp;#34;Region&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;s&#34;&gt;&amp;#34;16, 4&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;s&#34;&gt;&amp;#34;371, 4&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;s&#34;&gt;&amp;#34;371, 60&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;s&#34;&gt;&amp;#34;16, 60&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;o&#34;&gt;],&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;s&#34;&gt;&amp;#34;Checksum&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;o&#34;&gt;],&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;s&#34;&gt;&amp;#34;Code&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;200&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;s&#34;&gt;&amp;#34;Status&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;OK&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;/nav&gt;
+
+&lt;h2 id=&#34;sdks&#34;&gt;&lt;strong&gt;SDKs&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;Using an SDK (API client) is the quickest way for a developer to speed up the development. An SDK takes care of a lot of low-level details of making requests and handling responses and lets you focus on writing code specific to your particular project. Checkout our &lt;a href=&#34;https://github.com/aspose-barcode-cloud&#34;&gt;GitHub repository&lt;/a&gt; for a complete list of Aspose.BarCode SDKs along with working examples, to get you started in no time.&lt;/p&gt;
+&lt;h3 id=&#34;sdk-examples&#34;&gt;&lt;strong&gt;SDK Examples&lt;/strong&gt;&lt;/h3&gt;
+&lt;h4 id=&#34;read-barcode-from-local-image&#34;&gt;&lt;strong&gt;Read Barcode from Local Image&lt;/strong&gt;&lt;/h4&gt;
+
+
+
+
+
+&lt;nav&gt;
+  &lt;div class=&#34;book-tabs nav nav-tabs&#34; id=&#34;nav-tab&#34; role=&#34;tablist&#34;&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-4&#34; id=&#34;tabs-4-1&#34; checked=&#34;checked&#34; /&gt;
+      &lt;label for=&#34;tabs-4-1&#34;&gt;C#&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/45a0fda4a2cee116f1bf7a1a7f428b3a.js&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-4&#34; id=&#34;tabs-4-2&#34;  /&gt;
+      &lt;label for=&#34;tabs-4-2&#34;&gt;Java&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/bffef2dcfc12bd403e4d35809df515e8.js&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-4&#34; id=&#34;tabs-4-3&#34;  /&gt;
+      &lt;label for=&#34;tabs-4-3&#34;&gt;PHP&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/7dd7c6f477aeb4eabd1afc57e6913ccd.js?file=Example-ReadBarcodeFromLocal.php&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-4&#34; id=&#34;tabs-4-4&#34;  /&gt;
+      &lt;label for=&#34;tabs-4-4&#34;&gt;Python&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/ef70cc3af72d10f6d35f34abd0ecb0a6.js&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-4&#34; id=&#34;tabs-4-5&#34;  /&gt;
+      &lt;label for=&#34;tabs-4-5&#34;&gt;Node.js&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/3d80ec0b502975afa622577a2ca7bf0a.js?file=Example-ReadBarcodeFromLocal.ts&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-4&#34; id=&#34;tabs-4-6&#34;  /&gt;
+      &lt;label for=&#34;tabs-4-6&#34;&gt;Go&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/48e56cabb3323df86d69082a42512b98.js&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;&lt;/div&gt;
+&lt;/nav&gt;
+
+&lt;h4 id=&#34;read-barcode-from-external-image-url&#34;&gt;&lt;strong&gt;Read Barcode from External Image URL&lt;/strong&gt;&lt;/h4&gt;
+
+
+
+
+
+&lt;nav&gt;
+  &lt;div class=&#34;book-tabs nav nav-tabs&#34; id=&#34;nav-tab&#34; role=&#34;tablist&#34;&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-5&#34; id=&#34;tabs-5-1&#34; checked=&#34;checked&#34; /&gt;
+      &lt;label for=&#34;tabs-5-1&#34;&gt;C#&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/4d57ffcac82bc9571cdfa40994757bb4.js&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-5&#34; id=&#34;tabs-5-2&#34;  /&gt;
+      &lt;label for=&#34;tabs-5-2&#34;&gt;Java&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/70c0a032b99f2c41a528f2fe88c9d134.js&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-5&#34; id=&#34;tabs-5-3&#34;  /&gt;
+      &lt;label for=&#34;tabs-5-3&#34;&gt;PHP&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/7dd7c6f477aeb4eabd1afc57e6913ccd.js?file=Example-ReadBarcodeFromUrl.php&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-5&#34; id=&#34;tabs-5-4&#34;  /&gt;
+      &lt;label for=&#34;tabs-5-4&#34;&gt;Python&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/d7dfea1d3c77064f52bde8dc63bebad3.js&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-5&#34; id=&#34;tabs-5-5&#34;  /&gt;
+      &lt;label for=&#34;tabs-5-5&#34;&gt;Node.js&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/3d80ec0b502975afa622577a2ca7bf0a.js?file=Example-ReadBarcodeFromUrl.ts&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-5&#34; id=&#34;tabs-5-6&#34;  /&gt;
+      &lt;label for=&#34;tabs-5-6&#34;&gt;Go&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/ce263f7e28965768eac8f21050b5e317.js&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;&lt;/div&gt;
+&lt;/nav&gt;
+
+&lt;h4 id=&#34;read-barcode-from-request-body&#34;&gt;&lt;strong&gt;Read Barcode from Request Body&lt;/strong&gt;&lt;/h4&gt;
+
+
+
+
+
+&lt;nav&gt;
+  &lt;div class=&#34;book-tabs nav nav-tabs&#34; id=&#34;nav-tab&#34; role=&#34;tablist&#34;&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-6&#34; id=&#34;tabs-6-1&#34; checked=&#34;checked&#34; /&gt;
+      &lt;label for=&#34;tabs-6-1&#34;&gt;C#&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/81d865a9f2bbb9638c114c5ab38ef7ac.js&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-6&#34; id=&#34;tabs-6-2&#34;  /&gt;
+      &lt;label for=&#34;tabs-6-2&#34;&gt;Java&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/a812f6afdbadc829ba3b73676e3d0d88.js&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-6&#34; id=&#34;tabs-6-3&#34;  /&gt;
+      &lt;label for=&#34;tabs-6-3&#34;&gt;PHP&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/7dd7c6f477aeb4eabd1afc57e6913ccd.js?file=Example-ReadBarcodeFromRequestBody.php&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-6&#34; id=&#34;tabs-6-4&#34;  /&gt;
+      &lt;label for=&#34;tabs-6-4&#34;&gt;Python&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/008ac62a87353fdd28c9628d2ac05d34.js&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-6&#34; id=&#34;tabs-6-5&#34;  /&gt;
+      &lt;label for=&#34;tabs-6-5&#34;&gt;Node.js&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/3d80ec0b502975afa622577a2ca7bf0a.js?file=Example-ReadBarcodeFromRequestBody.ts&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-6&#34; id=&#34;tabs-6-6&#34;  /&gt;
+      &lt;label for=&#34;tabs-6-6&#34;&gt;Go&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/63423e8931bc044d5545ac47af66c173.js&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;&lt;/div&gt;
+&lt;/nav&gt;
+
+&lt;h4 id=&#34;recognise-barcode-with-checksum-option&#34;&gt;&lt;strong&gt;Recognise Barcode with Checksum Option&lt;/strong&gt;&lt;/h4&gt;
+
+
+
+
+
+&lt;nav&gt;
+  &lt;div class=&#34;book-tabs nav nav-tabs&#34; id=&#34;nav-tab&#34; role=&#34;tablist&#34;&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-7&#34; id=&#34;tabs-7-1&#34; checked=&#34;checked&#34; /&gt;
+      &lt;label for=&#34;tabs-7-1&#34;&gt;C#&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/5b3e55e129c0801c263914e35b99dcf7.js&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-7&#34; id=&#34;tabs-7-2&#34;  /&gt;
+      &lt;label for=&#34;tabs-7-2&#34;&gt;Java&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/376700bda6dba920c4df0809e4b12452.js&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-7&#34; id=&#34;tabs-7-3&#34;  /&gt;
+      &lt;label for=&#34;tabs-7-3&#34;&gt;PHP&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/7dd7c6f477aeb4eabd1afc57e6913ccd.js?file=Example-RecogniseBarcodeWithChecksumOption.php&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-7&#34; id=&#34;tabs-7-4&#34;  /&gt;
+      &lt;label for=&#34;tabs-7-4&#34;&gt;Python&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/cf5fa5b7a6fc21327aaa76f1dfc8ef45.js&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-7&#34; id=&#34;tabs-7-5&#34;  /&gt;
+      &lt;label for=&#34;tabs-7-5&#34;&gt;Node.js&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/3d80ec0b502975afa622577a2ca7bf0a.js?file=Example-RecogniseBarcodeWithChecksumOption.ts&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-7&#34; id=&#34;tabs-7-6&#34;  /&gt;
+      &lt;label for=&#34;tabs-7-6&#34;&gt;Go&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/5a60e4bca5c318b9d43319fb9933192a.js&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;&lt;/div&gt;
+&lt;/nav&gt;
+
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Developer-Guide: Recognition Settings</title>
+      <link>https://aspose-barcode-cloud.github.io/recognition-settings/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://aspose-barcode-cloud.github.io/recognition-settings/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;overview&#34;&gt;&lt;strong&gt;Overview&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;In the barcode recognition process implemented in &lt;em&gt;&lt;strong&gt;Aspose.BarCode for Cloud&lt;/strong&gt;&lt;/em&gt;, barcode data decoding is initiated according to the special protocol after scanning the raw data from a graphical representation. Some linear and postal barcode types have passed standardization after their wide implementation, and therefore, it has lead to the presence of incompatible decoding formats. To resolve possible conflicts, class &lt;em&gt;BarCodeReader&lt;/em&gt; provides a special class called &lt;em&gt;BarcodeSettings&lt;/em&gt; used to manage barcode decoding settings.&lt;/p&gt;
+&lt;h2 id=&#34;checksum-verification&#34;&gt;&lt;strong&gt;Checksum Verification&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;Varios 1D and postal types include checksum control mechanisms for data integrity verification. To adjust checksum settings for data validation purposes, class &lt;em&gt;BarcodeSettings&lt;/em&gt; contains the &lt;em&gt;ChecksumValidation&lt;/em&gt; enum. Generally, barcode types can be classified according to the following types: with obligatory checksum controls and with optional ones. The &lt;em&gt;ChecksumValidation&lt;/em&gt; enum suggests different options for these two groups. The barcode recognition procedure varies in line with checksum settings.&lt;/p&gt;
+&lt;h3 id=&#34;checksum-validation-for-symbologies-with-obligatory-checksum&#34;&gt;&lt;strong&gt;Checksum Validation for symbologies with Obligatory Checksum&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;Barcoded types with obligatory checksum controls require performing compulsive checksum validation when &lt;em&gt;ChecksumValidation&lt;/em&gt; is initialized using &lt;em&gt;ChecksumValidation.DEFAULT&lt;/em&gt; or &lt;em&gt;ChecksumValidation.ON&lt;/em&gt; values. Alternatively, setting the &lt;em&gt;ChecksumValidation.Off&lt;/em&gt; value turns off checksum verification and in this way, allows decoding information from invalid barcodes. This option increases the probability of incorrect recognition.&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;&lt;img src=&#34;code11.png&#34;&gt;&lt;/p&gt; 
+&lt;h3 id=&#34;checksum-validation-for-barcodes-with-optional-checksum&#34;&gt;&lt;strong&gt;Checksum Validation for Barcodes with Optional Checksum&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;ChecksumValidation&lt;/em&gt; allows enabling and disabling checksum controls for barcode standards with optional checksum verification. To request checksum validation, the following setting should be used: &lt;em&gt;ChecksumValidation.ON&lt;/em&gt;. When other options, &lt;em&gt;ChecksumValidation.DEFAULT&lt;/em&gt; and &lt;em&gt;ChecksumValidation.OFF&lt;/em&gt;, are enabled, checksum controls are disabled.&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;&lt;img src=&#34;code39.png&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;managing-barcodes-with-unicode-encodings&#34;&gt;&lt;strong&gt;Managing Barcodes with Unicode Encodings&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Aspose.BarCode for Cloud&lt;/strong&gt;&lt;/em&gt; provides class &lt;em&gt;BarcodeSettings&lt;/em&gt; that contains a special method called &lt;em&gt;setDetectEncoding&lt;/em&gt; that enables the automatic recognition of UTF8 and UTF16 Unicode encodings for 2D barcode types and allows re-encoding barcode information into a string with Unicode characters. If this recognition mode is turned off, barcode information can be scanned and decoded manually based on the desired encoding.&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;&lt;img src=&#34;qrdetectencoding.png&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;fnc-symbols&#34;&gt;&lt;strong&gt;FNC Symbols&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;The GS1 association suggests using FNC character to perform decoding of some symbologies, including &lt;em&gt;Code 128&lt;/em&gt; and &lt;em&gt;Code 128&lt;/em&gt;. Four types of FNC symbols (FNC1-4) are supported. FNC1 is the most widely used one that is intended for GS1 Application Identifier (AI) marking. When a barcode does not relate to any of GS1 types (e.g. &lt;em&gt;Code 128&lt;/em&gt; or &lt;em&gt;GS1 Code 128&lt;/em&gt;), the decoder processes FNC symbols as “&amp;lt;FNC#&amp;gt;”. These symbols can be removed from decoding results passing the &lt;em&gt;False&lt;/em&gt; value to the &lt;em&gt;setStripFNC&lt;/em&gt; method.&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;&lt;img src=&#34;code128fnc.png&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;australia-post-barcodes&#34;&gt;&lt;strong&gt;Australia Post Barcodes&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;Australia Post&lt;/em&gt; is a 4-state postal barcode type implemented by the Australian Post. This type requires including special two-digit format control code (FCC) fields and eight-digit sorting code (SC) fields into barcode information. FCC fields are intended to set one of three supported types with various fixed number of bars: 37, 52, or 67 bars. For some FCC, barcodes may comprise a customer information (CI) field that indicates one of the encoding types supporting numerical or alphanumeric characters. Customer information can take 31 bars in 67-length barcodes or 16 bars in 52-length ones. The &lt;em&gt;Australia Post&lt;/em&gt; symbology has checksum controls and supports Reed-Solomon error correction.&lt;/p&gt;
+&lt;p&gt;Because of the possible presence of customer information in barcode information for &lt;em&gt;Australia Post&lt;/em&gt;, the recognition process has some peculiarities. &lt;em&gt;&lt;strong&gt;Aspose.BarCode for Cloud&lt;/strong&gt;&lt;/em&gt; provides class &lt;em&gt;AustraliaPostSettings&lt;/em&gt; to manage recognition parameters according to specific industrial needs.&lt;/p&gt;
+&lt;h3 id=&#34;decoding-customer-information-in-standard-formats&#34;&gt;&lt;strong&gt;Decoding Customer Information in Standard Formats&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;The &lt;em&gt;Australia Post&lt;/em&gt; standard enables encoding additional customer data in three formats; automatic detection of the used format is not supported. The desired decoding format can be enabled through the &lt;em&gt;setCustomerInformationInterpretingType&lt;/em&gt; method that can take different values explained in the table below.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Australia Post Encoding Table&lt;/th&gt;
+&lt;th&gt;Supported Symbols&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;CTable&lt;/td&gt;
+&lt;td&gt;Numerical digits, English letters, space symbol, and #&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;NTable&lt;/td&gt;
+&lt;td&gt;Numerical digits&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Other&lt;/td&gt;
+&lt;td&gt;0, 1, 2, and 3 that correspond to H, A, D, and T states&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;CTable&lt;/strong&gt;&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;&lt;img src=&#34;australiapostctable.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;NTable&lt;/strong&gt;&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;&lt;img src=&#34;australiapostntable.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Other&lt;/strong&gt;&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;&lt;img src=&#34;australiapostother.png&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;removal-of-fill-patterns&#34;&gt;&lt;strong&gt;Removal of Fill Patterns&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;The &lt;em&gt;Australia Post&lt;/em&gt; symbology requires setting fixed size for each subtype. When the &lt;em&gt;CTable&lt;/em&gt; format is enabled, the empty space included in the input message is decoded as “z”. To disable this property, the &lt;em&gt;setIgnoreEndingFillingPatternsForCTable&lt;/em&gt; method needs to be called.&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;&lt;img src=&#34;australiapostctableignoreending.png&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;decoding-customer-information-in-custom-format&#34;&gt;&lt;strong&gt;Decoding Customer Information in Custom Format&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Aspose.BarCode for Cloud&lt;/strong&gt;&lt;/em&gt; allows decoding customer data in various specific formats. To do this, a special interface called &lt;em&gt;AustraliaPostCustomerInformationDecoder&lt;/em&gt; is available. In this case, barcode data decoding is processed according to this interface; &lt;em&gt;CustomerInformationInterpretingType&lt;/em&gt; and &lt;em&gt;ignoreEndingFillingPatternsForCTable&lt;/em&gt; settings are ignored.&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;&lt;img src=&#34;australiapostcustomerinformationdecoder.png&#34;&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Developer-Guide: Recognition Quality and Speed</title>
+      <link>https://aspose-barcode-cloud.github.io/barcode-reading-optimization/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://aspose-barcode-cloud.github.io/barcode-reading-optimization/</guid>
+      <description>
+        
+        
+        &lt;p&gt;This documentation part provides a detailed description of various recognition quality settings that can be customized to optimize the accuracy and speed of barcode reading in &lt;em&gt;&lt;strong&gt;Aspose.BarCode for Cloud&lt;/strong&gt;&lt;/em&gt;.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Article&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://aspose-barcode-cloud.github.io/barcode-recognition-presets/&#34;&gt;Recognition Options and Presets&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Gives an overview of available presets and options to optimize barcode reading quality and speed&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://aspose-barcode-cloud.github.io/special-recognition-features/&#34;&gt;Recognition Quality Special Cases&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Describes special quality settings and median filtering options that can be used to improve recognition results in cases of various distortions and peculiarities in barcode images, such as Gaussian noise, white spots, colored barcodes on a colored background, inverted images, visual artifacts, erased bars, severely corrupted QR Codes, industrial Data Matrix barcodes, and others&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Developer-Guide: Decode Barcode Properties and Metadata</title>
+      <link>https://aspose-barcode-cloud.github.io/read-barcode-properties/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://aspose-barcode-cloud.github.io/read-barcode-properties/</guid>
+      <description>
+        
+        
+        
+
+&lt;div class=&#34;alert alert-primary&#34; role=&#34;alert&#34;&gt;
+
+&lt;a href=&#34;https://products.aspose.app/barcode/recognize&#34;&gt;Read Barcodes Online&lt;/a&gt;: You can test the quality of &lt;em&gt;&lt;strong&gt;Aspose.BarCode&lt;/strong&gt;&lt;/em&gt; recognition functionality and view the results online.
+&lt;/div&gt;
+
+&lt;h2 id=&#34;overview&#34;&gt;&lt;strong&gt;Overview&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Aspose.BarCode for Cloud&lt;/strong&gt;&lt;/em&gt; not only enables reading information encoded in a barcode but also provides a possibility to analyze its technical properties, including symbology, orientation angle, position, and metadata. This data is stored in objects of class &lt;em&gt;BarCodeResult&lt;/em&gt; and can be fetched using special methods described further in this article.&lt;/p&gt;
+&lt;h2 id=&#34;barcode-type-and-encoded-data&#34;&gt;&lt;strong&gt;Barcode Type and Encoded Data&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;To obtain input barcode data and its symbology, &lt;em&gt;getCodeText&lt;/em&gt; and &lt;em&gt;getCodeType&lt;/em&gt; methods of class &lt;em&gt;BarCodeResult&lt;/em&gt; can be used. The other method called &lt;em&gt;getCodeTypeName&lt;/em&gt; returns the text name of the barcode type.&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;&lt;img src=&#34;qrcodetext.png&#34;&gt;&lt;/p&gt; 
+&lt;h2 id=&#34;reading-barcode-data-as-byte-stream&#34;&gt;&lt;strong&gt;Reading Barcode Data as Byte Stream&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;It is possible to load barcode data as a byte stream using a special method of class &lt;em&gt;BarCodeResult&lt;/em&gt; that is called &lt;em&gt;getCodeBytes&lt;/em&gt;.&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;&lt;img src=&#34;extcodebytes.png&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;decoding-barcode-text-in-unicode&#34;&gt;&lt;strong&gt;Decoding Barcode Text in Unicode&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;For barcodes in which the barcode data is encoded in a Unicode encoding, the library provides the &lt;em&gt;getCodeText&lt;/em&gt; method that can be used to enable the required encoding in the following format: getCodeText(java.nio.charset.Charset encoding).&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;&lt;img src=&#34;extunicodecodetext.png&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;quality-check-of-recognition-results&#34;&gt;&lt;strong&gt;Quality Check of Recognition Results&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;Developers may need to check whether barcode reading outputs are accurate and complete. For this purpose, &lt;em&gt;&lt;strong&gt;Aspose.BarCode for Cloud&lt;/strong&gt;&lt;/em&gt; provides two specific methods of class &lt;em&gt;BarCodeResult&lt;/em&gt;: &lt;em&gt;getConfidence&lt;/em&gt; and &lt;em&gt;getReadingQuality&lt;/em&gt;.&lt;br&gt;
+Depending of the quality of barcode reading results, the &lt;em&gt;getConfidence&lt;/em&gt; method returns a instance of the &lt;em&gt;BarCodeConfidence&lt;/em&gt; enum that denotes the recognition confidence level. This enumeration contains values &lt;em&gt;STRONG&lt;/em&gt;, &lt;em&gt;NONE&lt;/em&gt;, and &lt;em&gt;MODERATE&lt;/em&gt; that are discussed below. The &lt;em&gt;getReadingQuality&lt;/em&gt; method returns an estimate of recognition quality corresponding to the confidence level, as explained in the table below.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Confidence Level&lt;/th&gt;
+&lt;th&gt;Quality Value&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;em&gt;NONE&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;If the confidence level is &lt;em&gt;None&lt;/em&gt;, it indicates that the barcode is invalid and its information has been read with errors. If required, it is possible to get its symbology and position in the image and decode barcode information partially&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;em&gt;MODERATE&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;80&lt;/td&gt;
+&lt;td&gt;This confidence level may be returned for linear and postal barcode types with weak or absent checksum controls. Furthermore, it is necessary to analyze the result of the &lt;em&gt;getReadingQuality&lt;/em&gt; method. The absolute correctness of barcode reading results is not assured&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;em&gt;STRONG&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;100&lt;/td&gt;
+&lt;td&gt;This confidence level is returned for all 2D symbologies with Reed-Solomon error correction. It means that barcode text has been recognized accurately&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;barcode-position-and-orientation-angle&#34;&gt;&lt;strong&gt;Barcode Position and Orientation Angle&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;To obtain the position of a source barcode and its orientation angle, methods class &lt;em&gt;BarCodeRegionParameters&lt;/em&gt; can be used. This class allows getting the information about the barcode region in the following forms:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Quadrangle – a quadrangle object that bounds a barcode&lt;/li&gt;
+&lt;li&gt;Rectangle - a rectangle object that bounds a barcode&lt;/li&gt;
+&lt;li&gt;Points – an array of points constituting a barcode&lt;/li&gt;
+&lt;li&gt;Angle – an orientation angle in degrees&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p align=&#34;center&#34;&gt;&lt;img src=&#34;qr_code128.png&#34; width=&#34;20%&#34; height=&#34;20%&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;barcode-metadata&#34;&gt;&lt;strong&gt;Barcode Metadata&lt;/strong&gt;&lt;/h2&gt;
+&lt;h3 id=&#34;reading-macro-pdf417-and-macro-pdf417-metadata&#34;&gt;&lt;strong&gt;Reading Macro PDF417 and Macro PDF417 Metadata&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;Metadata from &lt;em&gt;PDF417&lt;/em&gt; barcodes can be obtained using methods of class &lt;em&gt;Pdf417ExtendedParameters&lt;/em&gt; that are listed below.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;PDF417 Metadata Method&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;em&gt;getPdf417MacroFileID&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;Gets the unique identifier of a barcode series or a PDF417 file&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;em&gt;getPdf417MacroSegmentID&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;Gets the current identifier of a segment&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;em&gt;getPdf417MacroSegmentsCount&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;Returns the number of barcodes in a series&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;em&gt;getPdf417MacroFileName&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;Returns the name of a file&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;em&gt;getPdf417MacroChecksum&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;Gets the checksum value computed using CCITT-16 polynomial&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;em&gt;getPdf417MacroFileSize&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;Returs the total size of bytes in a series&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;em&gt;getPdf417MacroTimeStamp&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;Returns the time spent to generate/send the file&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;em&gt;getPdf417MacroAddressee&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;Gets the address of the file sender&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;em&gt;getPdf417MacroSender&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;Returns the name of the file sender&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p align=&#34;center&#34;&gt;&lt;img src=&#34;extpdf417meta.png&#34;&gt;&lt;/p&gt;  
+&lt;h3 id=&#34;reading-metadata-from-qr-codes-with-structured-append&#34;&gt;&lt;strong&gt;Reading Metadata from QR Codes with Structured Append&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;To fetch metadata from &lt;em&gt;QR Code&lt;/em&gt; barcodes with structured append, &lt;em&gt;&lt;strong&gt;Aspose.BarCode for Cloud&lt;/strong&gt;&lt;/em&gt; provides a special class called &lt;em&gt;QRExtendedParameters&lt;/em&gt;. Methods of this class enable reading the information from structured append that is used to combine several &lt;em&gt;QR Code&lt;/em&gt; barcode into one. This data can be obtained using the following methods:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;getQRStructuredAppendModeBarCodeIndex&lt;/em&gt; - returns the sequence number of the current barcode (starting from 0)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;getQRStructuredAppendModeBarCodesQuantity&lt;/em&gt; - returns the number of barcodes in a composite &lt;em&gt;QR Code&lt;/em&gt; barcode taht can take values from 2 to 16&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;getQRStructuredAppendModeParityData&lt;/em&gt; - returns the checksum identifier byte that is usually computed as &lt;em&gt;XOR&lt;/em&gt; of all bytes in which UTF16BE characters are encoded in two bytes&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p align=&#34;center&#34;&gt;&lt;img src=&#34;extqrmeta.png&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;reading-metadata-from-databar-barcodes-with-2d-components&#34;&gt;&lt;strong&gt;Reading Metadata from DataBar Barcodes with 2D Components&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;Metadata from &lt;em&gt;DataBar&lt;/em&gt; barcodes with 2D components can be obtained using class called &lt;em&gt;DataBarExtendedParameters&lt;/em&gt; that provides a special method called &lt;em&gt;is2DCompositeComponent&lt;/em&gt;. This methods allows enabling or disabling a 2D component in &lt;em&gt;DataBar&lt;/em&gt; barcodes.&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;&lt;img src=&#34;extdatabarmeta.png&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;reading-metadata-from-1d-barcodes&#34;&gt;&lt;strong&gt;Reading Metadata from 1D Barcodes&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;Some 1D barcode types, i.e. &lt;em&gt;EAN 13&lt;/em&gt;, allow separating barcode input information itself from the checksum value. To do this, class &lt;em&gt;OneDExtendedParameters&lt;/em&gt; provides the &lt;em&gt;getValue&lt;/em&gt; method that allows getting 1D barcode text and the &lt;em&gt;getCheckSum&lt;/em&gt; method that returns the result of checksum computation.&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;&lt;img src=&#34;ean13.png&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;getting-raw-data-from-code-128-barcodes&#34;&gt;&lt;strong&gt;Getting Raw Data from Code 128 Barcodes&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;Input data stored in &lt;em&gt;Code 128&lt;/em&gt; barcodes can be encoded in three ways: A, B, or C. Class &lt;em&gt;Code128ExtendedParameters&lt;/em&gt; provides a special method called &lt;em&gt;getCode128DataPortions&lt;/em&gt; that returns decoded parts of barcode input information and the encoding mode.&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;&lt;img src=&#34;code128.png&#34;&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

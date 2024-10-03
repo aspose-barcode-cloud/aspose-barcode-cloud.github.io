@@ -1,0 +1,1204 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Documentation – Generate and Save Barcodes in Cloud</title>
+    <link>https://aspose-barcode-cloud.github.io/generating-and-saving-barcode/</link>
+    <description>Recent content in Generate and Save Barcodes in Cloud on Documentation</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	  <atom:link href="https://aspose-barcode-cloud.github.io/generating-and-saving-barcode/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Developer-Guide: Generate, Format and Manipulate a Barcode using Cloud Storage</title>
+      <link>https://aspose-barcode-cloud.github.io/generate-format-and-manipulate-a-barcode-using-cloud-storage/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://aspose-barcode-cloud.github.io/generate-format-and-manipulate-a-barcode-using-cloud-storage/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;introduction&#34;&gt;&lt;strong&gt;Introduction&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;Aspose.BarCode for Cloud has provided the simplest API to generate a barcode and save it on Aspose Cloud Storage. This API can be used with any language: .NET, Java, PHP, Ruby, Rails, Python, jQuery and many more.&lt;/p&gt;
+&lt;h2 id=&#34;api-information&#34;&gt;&lt;strong&gt;API Information&lt;/strong&gt;&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;&lt;strong&gt;API&lt;/strong&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;&lt;strong&gt;Type&lt;/strong&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;&lt;strong&gt;Description&lt;/strong&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;&lt;strong&gt;Resource Link&lt;/strong&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;/barcode/{name}/generate&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;PUT&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Generate barcode and save on server (from query params or from file with json or xml content)&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;a href=&#34;https://apireference.aspose.cloud/barcode/#/Barcode/PutBarcodeGenerateFile&#34;&gt;PutBarcodeGenerateFile&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;curl-example&#34;&gt;&lt;strong&gt;cURL Example&lt;/strong&gt;&lt;/h3&gt;
+
+
+
+
+
+&lt;nav&gt;
+  &lt;div class=&#34;book-tabs nav nav-tabs&#34; id=&#34;nav-tab&#34; role=&#34;tablist&#34;&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-1&#34; id=&#34;tabs-1-1&#34; checked=&#34;checked&#34; /&gt;
+      &lt;label for=&#34;tabs-1-1&#34;&gt;Request&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// First get Access Token
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// Get Client Secret and Client Id from https://dashboard.aspose.cloud/
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;curl&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;v&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;https://api.aspose.cloud/oauth2/token&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;X&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;POST&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;d&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;grant_type&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;client_credentials&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;client_idXXXXXXXXX&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;client_secret&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;XXXXXXXXX&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;H&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;Content-Type: application/x-www-form-urlencoded&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;H&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;Accept: application/json&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// cURL example to generate barcode and save on server
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;curl&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;v&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;https://api.aspose.cloud/v3.0/barcode/sample-barcode.png/generate?text=AsposeBarCode&amp;amp;type=Code128&amp;amp;format=png&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;X&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;PUT&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;H&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;Content-Type: application/json&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;H&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;Accept: application/json&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-1&#34; id=&#34;tabs-1-2&#34;  /&gt;
+      &lt;label for=&#34;tabs-1-2&#34;&gt;Response&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;s&#34;&gt;&amp;#34;Code&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;200&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;s&#34;&gt;&amp;#34;Status&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;OK&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;/nav&gt;
+
+&lt;h2 id=&#34;sdks&#34;&gt;&lt;strong&gt;SDKs&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;Using an SDK (API client) is the quickest way for a developer to speed up the development. An SDK takes care of a lot of low-level details of making requests and handling responses and lets you focus on writing code specific to your particular project. Checkout our &lt;a href=&#34;https://github.com/aspose-barcode-cloud&#34;&gt;GitHub repository&lt;/a&gt; for a complete list of Aspose.BarCode SDKs along with working examples, to get you started in no time.&lt;/p&gt;
+&lt;h3 id=&#34;sdk-examples&#34;&gt;&lt;strong&gt;SDK Examples&lt;/strong&gt;&lt;/h3&gt;
+&lt;h4 id=&#34;generate-a-barcode-on-aspose-cloud-storage&#34;&gt;&lt;strong&gt;Generate a Barcode on Aspose Cloud Storage&lt;/strong&gt;&lt;/h4&gt;
+
+
+
+
+
+&lt;nav&gt;
+  &lt;div class=&#34;book-tabs nav nav-tabs&#34; id=&#34;nav-tab&#34; role=&#34;tablist&#34;&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-4&#34; id=&#34;tabs-4-1&#34; checked=&#34;checked&#34; /&gt;
+      &lt;label for=&#34;tabs-4-1&#34;&gt;C#&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/f91d1296e69f11f26d20907fdf662e59.js&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-4&#34; id=&#34;tabs-4-2&#34;  /&gt;
+      &lt;label for=&#34;tabs-4-2&#34;&gt;Java&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/0e0cdae72b99c579ed0da982b0e9cea7.js&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-4&#34; id=&#34;tabs-4-3&#34;  /&gt;
+      &lt;label for=&#34;tabs-4-3&#34;&gt;PHP&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/7dd7c6f477aeb4eabd1afc57e6913ccd.js?file=Example-PutBarcodeGenerateFileOnCloudStorage.php&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-4&#34; id=&#34;tabs-4-4&#34;  /&gt;
+      &lt;label for=&#34;tabs-4-4&#34;&gt;Python&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/2b8815d9eb48bd894bb6867318f7a523.js&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-4&#34; id=&#34;tabs-4-5&#34;  /&gt;
+      &lt;label for=&#34;tabs-4-5&#34;&gt;Node.js&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/3d80ec0b502975afa622577a2ca7bf0a.js?file=Example-PutBarcodeGenerateFileOnCloudStorage.ts&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-4&#34; id=&#34;tabs-4-6&#34;  /&gt;
+      &lt;label for=&#34;tabs-4-6&#34;&gt;Go&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/0083aa4036f686740cf547e3d4e3e3ff.js&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;&lt;/div&gt;
+&lt;/nav&gt;
+
+&lt;h4 id=&#34;generate-acodablockf-type-barcode&#34;&gt;&lt;strong&gt;Generate a CodablockF Type Barcode&lt;/strong&gt;&lt;/h4&gt;
+
+
+
+
+
+&lt;nav&gt;
+  &lt;div class=&#34;book-tabs nav nav-tabs&#34; id=&#34;nav-tab&#34; role=&#34;tablist&#34;&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-5&#34; id=&#34;tabs-5-1&#34; checked=&#34;checked&#34; /&gt;
+      &lt;label for=&#34;tabs-5-1&#34;&gt;C#&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/6f99b0df41428285ecc1dd47931fdb6d.js&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-5&#34; id=&#34;tabs-5-2&#34;  /&gt;
+      &lt;label for=&#34;tabs-5-2&#34;&gt;Java&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/083785d2dfd82560e773d1433ec1d6e0.js&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-5&#34; id=&#34;tabs-5-3&#34;  /&gt;
+      &lt;label for=&#34;tabs-5-3&#34;&gt;PHP&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/7dd7c6f477aeb4eabd1afc57e6913ccd.js?file=Example-GenerateASpecificBarcode.php&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-5&#34; id=&#34;tabs-5-4&#34;  /&gt;
+      &lt;label for=&#34;tabs-5-4&#34;&gt;Python&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/7cb3914bc920c70957935e37e85d2b30.js&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-5&#34; id=&#34;tabs-5-5&#34;  /&gt;
+      &lt;label for=&#34;tabs-5-5&#34;&gt;Node.js&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/3d80ec0b502975afa622577a2ca7bf0a.js?file=Example-GenerateASpecificBarcode.ts&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-5&#34; id=&#34;tabs-5-6&#34;  /&gt;
+      &lt;label for=&#34;tabs-5-6&#34;&gt;Go&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/867bd62c2f27641a3267466cd00d6158.js&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;&lt;/div&gt;
+&lt;/nav&gt;
+
+&lt;h4 id=&#34;set-barcode-image-resolution&#34;&gt;&lt;strong&gt;Set Barcode Image Resolution&lt;/strong&gt;&lt;/h4&gt;
+
+
+
+
+
+&lt;nav&gt;
+  &lt;div class=&#34;book-tabs nav nav-tabs&#34; id=&#34;nav-tab&#34; role=&#34;tablist&#34;&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-6&#34; id=&#34;tabs-6-1&#34; checked=&#34;checked&#34; /&gt;
+      &lt;label for=&#34;tabs-6-1&#34;&gt;C#&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/1616f2ec2735967b12099f9fbd715d9b.js&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-6&#34; id=&#34;tabs-6-2&#34;  /&gt;
+      &lt;label for=&#34;tabs-6-2&#34;&gt;Java&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/e8c0728375d651e6662f23f52d17ccce.js&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-6&#34; id=&#34;tabs-6-3&#34;  /&gt;
+      &lt;label for=&#34;tabs-6-3&#34;&gt;PHP&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/7dd7c6f477aeb4eabd1afc57e6913ccd.js?file=Example-SetBarcodeImageResolution.php&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-6&#34; id=&#34;tabs-6-4&#34;  /&gt;
+      &lt;label for=&#34;tabs-6-4&#34;&gt;Python&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/69f6584b4b39d83cadca465f24acd4e8.js&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-6&#34; id=&#34;tabs-6-5&#34;  /&gt;
+      &lt;label for=&#34;tabs-6-5&#34;&gt;Node.js&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/3d80ec0b502975afa622577a2ca7bf0a.js?file=Example-SetBarcodeImageResolution.ts&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-6&#34; id=&#34;tabs-6-6&#34;  /&gt;
+      &lt;label for=&#34;tabs-6-6&#34;&gt;Go&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/b39d9265412e2af2dd87679ab9e27693.js&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;&lt;/div&gt;
+&lt;/nav&gt;
+
+&lt;h4 id=&#34;specify-codetext-and-symbology-for-barcode&#34;&gt;&lt;strong&gt;Specify Codetext and Symbology for barcode&lt;/strong&gt;&lt;/h4&gt;
+
+
+
+
+
+&lt;nav&gt;
+  &lt;div class=&#34;book-tabs nav nav-tabs&#34; id=&#34;nav-tab&#34; role=&#34;tablist&#34;&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-7&#34; id=&#34;tabs-7-1&#34; checked=&#34;checked&#34; /&gt;
+      &lt;label for=&#34;tabs-7-1&#34;&gt;C#&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/aa3772dc829ab43231036710dbe26b67.js&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-7&#34; id=&#34;tabs-7-2&#34;  /&gt;
+      &lt;label for=&#34;tabs-7-2&#34;&gt;Java&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/44d3bd980fa221c7683fda99eb1bb6b0.js&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-7&#34; id=&#34;tabs-7-3&#34;  /&gt;
+      &lt;label for=&#34;tabs-7-3&#34;&gt;PHP&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/7dd7c6f477aeb4eabd1afc57e6913ccd.js?file=Example-SpecifyCodetextAndSymbology.php&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-7&#34; id=&#34;tabs-7-4&#34;  /&gt;
+      &lt;label for=&#34;tabs-7-4&#34;&gt;Python&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/1bcab1b8617ad088346f1a1355af25c6.js&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-7&#34; id=&#34;tabs-7-5&#34;  /&gt;
+      &lt;label for=&#34;tabs-7-5&#34;&gt;Node.js&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/3d80ec0b502975afa622577a2ca7bf0a.js?file=Example-SpecifyCodetextAndSymbology.ts&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-7&#34; id=&#34;tabs-7-6&#34;  /&gt;
+      &lt;label for=&#34;tabs-7-6&#34;&gt;Go&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/1d155d4cbbedd2898c382db5439df41a.js&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;&lt;/div&gt;
+&lt;/nav&gt;
+
+&lt;h4 id=&#34;set-dimensions-of-a-barcode&#34;&gt;&lt;strong&gt;Set Dimensions of a Barcode&lt;/strong&gt;&lt;/h4&gt;
+
+
+
+
+
+&lt;nav&gt;
+  &lt;div class=&#34;book-tabs nav nav-tabs&#34; id=&#34;nav-tab&#34; role=&#34;tablist&#34;&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-8&#34; id=&#34;tabs-8-1&#34; checked=&#34;checked&#34; /&gt;
+      &lt;label for=&#34;tabs-8-1&#34;&gt;C#&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/87c09d903641d7127c37ebb9ad17bbd3.js&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-8&#34; id=&#34;tabs-8-2&#34;  /&gt;
+      &lt;label for=&#34;tabs-8-2&#34;&gt;Java&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/dfa661053da885296d7182096c47a48d.js&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-8&#34; id=&#34;tabs-8-3&#34;  /&gt;
+      &lt;label for=&#34;tabs-8-3&#34;&gt;PHP&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/7dd7c6f477aeb4eabd1afc57e6913ccd.js?file=Example-SetDimensionOfBarcode.php&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-8&#34; id=&#34;tabs-8-4&#34;  /&gt;
+      &lt;label for=&#34;tabs-8-4&#34;&gt;Python&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/56ea289c7dcbf846f0995886f70f1f06.js&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-8&#34; id=&#34;tabs-8-5&#34;  /&gt;
+      &lt;label for=&#34;tabs-8-5&#34;&gt;Node.js&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/3d80ec0b502975afa622577a2ca7bf0a.js?file=Example-SetDimensionOfBarcode.ts&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-8&#34; id=&#34;tabs-8-6&#34;  /&gt;
+      &lt;label for=&#34;tabs-8-6&#34;&gt;Go&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/92daf1433e28ca9a9a4bf424ed1a6c16.js&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;&lt;/div&gt;
+&lt;/nav&gt;
+
+&lt;h4 id=&#34;specify-barcode-image-save-format&#34;&gt;&lt;strong&gt;Specify Barcode Image Save Format&lt;/strong&gt;&lt;/h4&gt;
+
+
+
+
+
+&lt;nav&gt;
+  &lt;div class=&#34;book-tabs nav nav-tabs&#34; id=&#34;nav-tab&#34; role=&#34;tablist&#34;&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-9&#34; id=&#34;tabs-9-1&#34; checked=&#34;checked&#34; /&gt;
+      &lt;label for=&#34;tabs-9-1&#34;&gt;C#&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/00aa785de274e93ed594421576848787.js&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-9&#34; id=&#34;tabs-9-2&#34;  /&gt;
+      &lt;label for=&#34;tabs-9-2&#34;&gt;Java&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/c11c9809fd43e635a90e56eda15bc60e.js&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-9&#34; id=&#34;tabs-9-3&#34;  /&gt;
+      &lt;label for=&#34;tabs-9-3&#34;&gt;PHP&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/7dd7c6f477aeb4eabd1afc57e6913ccd.js?file=Example-SpecifyBarcodeImageSaveFormat.php&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-9&#34; id=&#34;tabs-9-4&#34;  /&gt;
+      &lt;label for=&#34;tabs-9-4&#34;&gt;Python&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/2bf0dab342dc89961a43b99eba86996e.js&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-9&#34; id=&#34;tabs-9-5&#34;  /&gt;
+      &lt;label for=&#34;tabs-9-5&#34;&gt;Node.js&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/3d80ec0b502975afa622577a2ca7bf0a.js?file=Example-SpecifyBarcodeImageSaveFormat.ts&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-9&#34; id=&#34;tabs-9-6&#34;  /&gt;
+      &lt;label for=&#34;tabs-9-6&#34;&gt;Go&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/56e198264c14c4f9173d5f06686e8f84.js&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;&lt;/div&gt;
+&lt;/nav&gt;
+
+&lt;h4 id=&#34;generate-barcode-with-appropriate-code-text-location&#34;&gt;&lt;strong&gt;Generate Barcode with Appropriate Code Text Location&lt;/strong&gt;&lt;/h4&gt;
+
+
+
+
+
+&lt;nav&gt;
+  &lt;div class=&#34;book-tabs nav nav-tabs&#34; id=&#34;nav-tab&#34; role=&#34;tablist&#34;&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-10&#34; id=&#34;tabs-10-1&#34; checked=&#34;checked&#34; /&gt;
+      &lt;label for=&#34;tabs-10-1&#34;&gt;C#&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/962506b187e5584f4801fe8a9a644e77.js&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-10&#34; id=&#34;tabs-10-2&#34;  /&gt;
+      &lt;label for=&#34;tabs-10-2&#34;&gt;Java&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/b82ff58823e2c68936a4b2575c982c66.js&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-10&#34; id=&#34;tabs-10-3&#34;  /&gt;
+      &lt;label for=&#34;tabs-10-3&#34;&gt;PHP&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/7dd7c6f477aeb4eabd1afc57e6913ccd.js?file=Example-SpecifyBarcodeTextLocation.php&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-10&#34; id=&#34;tabs-10-4&#34;  /&gt;
+      &lt;label for=&#34;tabs-10-4&#34;&gt;Python&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/f478a05c708536f537b7481010c7857e.js&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-10&#34; id=&#34;tabs-10-5&#34;  /&gt;
+      &lt;label for=&#34;tabs-10-5&#34;&gt;Node.js&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/3d80ec0b502975afa622577a2ca7bf0a.js?file=Example-SpecifyBarcodeTextLocation.ts&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-10&#34; id=&#34;tabs-10-6&#34;  /&gt;
+      &lt;label for=&#34;tabs-10-6&#34;&gt;Go&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/7c1061c4d8b910345765c588bf34dbb3.js&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;&lt;/div&gt;
+&lt;/nav&gt;
+
+&lt;h4 id=&#34;generate-barcode-with-checksum-option&#34;&gt;&lt;strong&gt;Generate Barcode with Checksum Option&lt;/strong&gt;&lt;/h4&gt;
+
+
+
+
+
+&lt;nav&gt;
+  &lt;div class=&#34;book-tabs nav nav-tabs&#34; id=&#34;nav-tab&#34; role=&#34;tablist&#34;&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-11&#34; id=&#34;tabs-11-1&#34; checked=&#34;checked&#34; /&gt;
+      &lt;label for=&#34;tabs-11-1&#34;&gt;C#&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/38a10ffc2c1cc8625efff80d38edcbdf.js&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-11&#34; id=&#34;tabs-11-2&#34;  /&gt;
+      &lt;label for=&#34;tabs-11-2&#34;&gt;Java&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/cf419b15f68fe257ca6bd58db9c92379.js&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-11&#34; id=&#34;tabs-11-3&#34;  /&gt;
+      &lt;label for=&#34;tabs-11-3&#34;&gt;PHP&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/7dd7c6f477aeb4eabd1afc57e6913ccd.js?file=Example-GenerateBarcodeWithChecksumOption.php&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-11&#34; id=&#34;tabs-11-4&#34;  /&gt;
+      &lt;label for=&#34;tabs-11-4&#34;&gt;Python&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/7ded5cb4e3949cb670d18b483b1add11.js&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-11&#34; id=&#34;tabs-11-5&#34;  /&gt;
+      &lt;label for=&#34;tabs-11-5&#34;&gt;Node.js&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/3d80ec0b502975afa622577a2ca7bf0a.js?file=Example-GenerateBarcodeWithChecksumOption.ts&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-11&#34; id=&#34;tabs-11-6&#34;  /&gt;
+      &lt;label for=&#34;tabs-11-6&#34;&gt;Go&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/c3455052499bd7c7f3b885fef094b651.js&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;&lt;/div&gt;
+&lt;/nav&gt;
+
+&lt;h4 id=&#34;rotate-barcode-image-with-suitable-angle&#34;&gt;&lt;strong&gt;Rotate Barcode Image with Suitable Angle&lt;/strong&gt;&lt;/h4&gt;
+
+
+
+
+
+&lt;nav&gt;
+  &lt;div class=&#34;book-tabs nav nav-tabs&#34; id=&#34;nav-tab&#34; role=&#34;tablist&#34;&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-12&#34; id=&#34;tabs-12-1&#34; checked=&#34;checked&#34; /&gt;
+      &lt;label for=&#34;tabs-12-1&#34;&gt;C#&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/c53e6fad8f71a6653f3964d024c21bfc.js&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-12&#34; id=&#34;tabs-12-2&#34;  /&gt;
+      &lt;label for=&#34;tabs-12-2&#34;&gt;Java&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/3377124ef5054ed1093da6c769119207.js&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-12&#34; id=&#34;tabs-12-3&#34;  /&gt;
+      &lt;label for=&#34;tabs-12-3&#34;&gt;PHP&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/7dd7c6f477aeb4eabd1afc57e6913ccd.js?file=Example-RotateBarcodeImage.php&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-12&#34; id=&#34;tabs-12-4&#34;  /&gt;
+      &lt;label for=&#34;tabs-12-4&#34;&gt;Python&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/5619fe4173276f678ea166485a85800a.js&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-12&#34; id=&#34;tabs-12-5&#34;  /&gt;
+      &lt;label for=&#34;tabs-12-5&#34;&gt;Node.js&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/3d80ec0b502975afa622577a2ca7bf0a.js?file=Example-RotateBarcodeImage.ts&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-12&#34; id=&#34;tabs-12-6&#34;  /&gt;
+      &lt;label for=&#34;tabs-12-6&#34;&gt;Go&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/e88cbf3e20e492d78d9f01df45b6b0c6.js&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;&lt;/div&gt;
+&lt;/nav&gt;
+
+&lt;h4 id=&#34;set-barcode-image-size&#34;&gt;&lt;strong&gt;Set Barcode Image Size&lt;/strong&gt;&lt;/h4&gt;
+
+
+
+
+
+&lt;nav&gt;
+  &lt;div class=&#34;book-tabs nav nav-tabs&#34; id=&#34;nav-tab&#34; role=&#34;tablist&#34;&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-13&#34; id=&#34;tabs-13-1&#34; checked=&#34;checked&#34; /&gt;
+      &lt;label for=&#34;tabs-13-1&#34;&gt;C#&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/d7a0051b3a2233655922cd27638d915b.js&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-13&#34; id=&#34;tabs-13-2&#34;  /&gt;
+      &lt;label for=&#34;tabs-13-2&#34;&gt;Java&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/5d7eb1a5ca3f1d0a310ab722a84cdcda.js&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-13&#34; id=&#34;tabs-13-3&#34;  /&gt;
+      &lt;label for=&#34;tabs-13-3&#34;&gt;PHP&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/7dd7c6f477aeb4eabd1afc57e6913ccd.js?file=Example-SetBarcodeImageSize.php&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-13&#34; id=&#34;tabs-13-4&#34;  /&gt;
+      &lt;label for=&#34;tabs-13-4&#34;&gt;Python&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/51dc8a405c5b330b6ca16e29592bdaca.js&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-13&#34; id=&#34;tabs-13-5&#34;  /&gt;
+      &lt;label for=&#34;tabs-13-5&#34;&gt;Node.js&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/3d80ec0b502975afa622577a2ca7bf0a.js?file=Example-SetBarcodeImageSize.ts&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-13&#34; id=&#34;tabs-13-6&#34;  /&gt;
+      &lt;label for=&#34;tabs-13-6&#34;&gt;Go&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/97012194b6b8a9a00117308b00f870fc.js&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;&lt;/div&gt;
+&lt;/nav&gt;
+
+&lt;h4 id=&#34;set-height-of-the-bars-in-the-barcode-image&#34;&gt;&lt;strong&gt;Set Height of the Bars in the Barcode Image&lt;/strong&gt;&lt;/h4&gt;
+
+
+
+
+
+&lt;nav&gt;
+  &lt;div class=&#34;book-tabs nav nav-tabs&#34; id=&#34;nav-tab&#34; role=&#34;tablist&#34;&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-14&#34; id=&#34;tabs-14-1&#34; checked=&#34;checked&#34; /&gt;
+      &lt;label for=&#34;tabs-14-1&#34;&gt;C#&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/a548ca2f6321e366663c6f10ed7e54e0.js&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-14&#34; id=&#34;tabs-14-2&#34;  /&gt;
+      &lt;label for=&#34;tabs-14-2&#34;&gt;Java&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/ed619486e1815e1d36cadd2ffd5abe46.js&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-14&#34; id=&#34;tabs-14-3&#34;  /&gt;
+      &lt;label for=&#34;tabs-14-3&#34;&gt;PHP&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/7dd7c6f477aeb4eabd1afc57e6913ccd.js?file=Example-SetBarcodeBarsHeight.php&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-14&#34; id=&#34;tabs-14-4&#34;  /&gt;
+      &lt;label for=&#34;tabs-14-4&#34;&gt;Python&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/4209447b0c6300039b843e34274cdc3e.js&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-14&#34; id=&#34;tabs-14-5&#34;  /&gt;
+      &lt;label for=&#34;tabs-14-5&#34;&gt;Node.js&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/3d80ec0b502975afa622577a2ca7bf0a.js?file=Example-SetBarcodeBarsHeight.ts&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-14&#34; id=&#34;tabs-14-6&#34;  /&gt;
+      &lt;label for=&#34;tabs-14-6&#34;&gt;Go&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/45b4909a5b5e3a98edce44c5d54217f2.js&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;&lt;/div&gt;
+&lt;/nav&gt;
+
+&lt;h4 id=&#34;generate-multiple-barcodes&#34;&gt;&lt;strong&gt;Generate Multiple Barcodes&lt;/strong&gt;&lt;/h4&gt;
+
+
+
+
+
+&lt;nav&gt;
+  &lt;div class=&#34;book-tabs nav nav-tabs&#34; id=&#34;nav-tab&#34; role=&#34;tablist&#34;&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-15&#34; id=&#34;tabs-15-1&#34; checked=&#34;checked&#34; /&gt;
+      &lt;label for=&#34;tabs-15-1&#34;&gt;C#&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/13492976d5104a07cda07b7fc04b886f.js&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-15&#34; id=&#34;tabs-15-2&#34;  /&gt;
+      &lt;label for=&#34;tabs-15-2&#34;&gt;Java&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/30e0597a7b1ba6ff88a4489c97e32cde.js&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-15&#34; id=&#34;tabs-15-3&#34;  /&gt;
+      &lt;label for=&#34;tabs-15-3&#34;&gt;PHP&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/7dd7c6f477aeb4eabd1afc57e6913ccd.js?file=Example-GenerateMultipleBarcodes.php&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-15&#34; id=&#34;tabs-15-4&#34;  /&gt;
+      &lt;label for=&#34;tabs-15-4&#34;&gt;Python&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/0aa6c08db374c01e73733544e6c7d2b1.js&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-15&#34; id=&#34;tabs-15-5&#34;  /&gt;
+      &lt;label for=&#34;tabs-15-5&#34;&gt;Node.js&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/3d80ec0b502975afa622577a2ca7bf0a.js?file=Example-GenerateMultipleBarcodes.ts&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-15&#34; id=&#34;tabs-15-6&#34;  /&gt;
+      &lt;label for=&#34;tabs-15-6&#34;&gt;Go&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/fe445405c2505fad3da886bb2a1c5811.js&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;&lt;/div&gt;
+&lt;/nav&gt;
+
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Developer-Guide: Generate, Format and Manipulate a Barcode Without Cloud Storage</title>
+      <link>https://aspose-barcode-cloud.github.io/generate-format-and-manipulate-a-barcode-without-cloud-storage/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://aspose-barcode-cloud.github.io/generate-format-and-manipulate-a-barcode-without-cloud-storage/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;introduction&#34;&gt;&lt;strong&gt;Introduction&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;Aspose.BarCode for Cloud has provided the simplest API to generate a barcode and get image as a stream object in an easy way without using any cloud storage operation. This API can be used with any language: .NET, Java, PHP, Ruby, Rails, Python, jQuery and many more.&lt;/p&gt;
+&lt;h2 id=&#34;api-information&#34;&gt;&lt;strong&gt;API Information&lt;/strong&gt;&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;&lt;strong&gt;API&lt;/strong&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;&lt;strong&gt;Type&lt;/strong&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;&lt;strong&gt;Description&lt;/strong&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;&lt;strong&gt;Resource Link&lt;/strong&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;/barcode/generate&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;GET&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Generate barcode&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;a href=&#34;https://apireference.aspose.cloud/barcode/#/Barcode/GetBarcodeGenerate&#34;&gt;GetBarcodeGenerate&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;curl-example&#34;&gt;&lt;strong&gt;cURL Example&lt;/strong&gt;&lt;/h3&gt;
+
+
+
+
+
+&lt;nav&gt;
+  &lt;div class=&#34;book-tabs nav nav-tabs&#34; id=&#34;nav-tab&#34; role=&#34;tablist&#34;&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-1&#34; id=&#34;tabs-1-1&#34; checked=&#34;checked&#34; /&gt;
+      &lt;label for=&#34;tabs-1-1&#34;&gt;Request&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// First get Access Token
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// Get Client Secret and Client Id from https://dashboard.aspose.cloud/
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;curl&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;v&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;https://api.aspose.cloud/oauth2/token&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;X&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;POST&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;d&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;grant_type&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;client_credentials&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;client_id&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mb&#34;&gt;0B1&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;7F&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;60&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;A&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;6D&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;69&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;426&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;B&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;9&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ABD&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;79&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;F35A6E9F7B&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;client_secret&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;53&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;b8b19adffa41a3e87dbbd8858977ae&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;H&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;Content-Type: application/x-www-form-urlencoded&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;H&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;Accept: application/json&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// cURL example to generate barcode and get image as a stream object
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;curl&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;v&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;https://api.aspose.cloud/v3.0/barcode/generate?text=AsposeBarCode&amp;amp;type=QR&amp;amp;format=png&amp;amp;enableChecksum=NO&amp;amp;resolution=96&amp;amp;dimensionX=0.7&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;X&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;GET&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;H&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;Content-Type: application/json&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;H&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;Accept: multipart/form-data&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;o&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;sample&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;barcode&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;png&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-1&#34; id=&#34;tabs-1-2&#34;  /&gt;
+      &lt;label for=&#34;tabs-1-2&#34;&gt;Response&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;img src=&#34;generate-format-and-manipulate-a-barcode-without-cloud-storage_1.png&#34; alt=&#34;todo:image_alt_text&#34;&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;/nav&gt;
+
+&lt;h2 id=&#34;sdks&#34;&gt;&lt;strong&gt;SDKs&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;Using an SDK (API client) is the quickest way for a developer to speed up the development. An SDK takes care of a lot of low-level details of making requests and handling responses and lets you focus on writing code specific to your particular project. Checkout our &lt;a href=&#34;https://github.com/aspose-barcode-cloud&#34;&gt;GitHub repository&lt;/a&gt; for a complete list of Aspose.BarCode SDKs along with working examples, to get you started in no time.&lt;/p&gt;
+&lt;h3 id=&#34;sdk-examples&#34;&gt;&lt;strong&gt;SDK Examples&lt;/strong&gt;&lt;/h3&gt;
+&lt;h4 id=&#34;generate-a-barcode-and-get-image-as-stream&#34;&gt;&lt;strong&gt;Generate a Barcode and Get Image as Stream&lt;/strong&gt;&lt;/h4&gt;
+
+
+
+
+
+&lt;nav&gt;
+  &lt;div class=&#34;book-tabs nav nav-tabs&#34; id=&#34;nav-tab&#34; role=&#34;tablist&#34;&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-3&#34; id=&#34;tabs-3-1&#34; checked=&#34;checked&#34; /&gt;
+      &lt;label for=&#34;tabs-3-1&#34;&gt;C#&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/8204b108d4966f58bae08dec977ea1c6.js&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-3&#34; id=&#34;tabs-3-2&#34;  /&gt;
+      &lt;label for=&#34;tabs-3-2&#34;&gt;Java&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/86ca3b2412bd9a512b62bb078b093b80.js&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-3&#34; id=&#34;tabs-3-3&#34;  /&gt;
+      &lt;label for=&#34;tabs-3-3&#34;&gt;PHP&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/7dd7c6f477aeb4eabd1afc57e6913ccd.js?file=Example-GenerateABarcodeAndGetImageStream.php&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-3&#34; id=&#34;tabs-3-4&#34;  /&gt;
+      &lt;label for=&#34;tabs-3-4&#34;&gt;Python&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/bba7dc746bffe92c6388f0f156ba5f58.js&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-3&#34; id=&#34;tabs-3-5&#34;  /&gt;
+      &lt;label for=&#34;tabs-3-5&#34;&gt;Node.js&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/3d80ec0b502975afa622577a2ca7bf0a.js?file=Example-GenerateABarcodeAndGetImageStream.ts&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-3&#34; id=&#34;tabs-3-6&#34;  /&gt;
+      &lt;label for=&#34;tabs-3-6&#34;&gt;Go&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/a148ff358c2ccc42d1a12691b01a2424.js&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;&lt;/div&gt;
+&lt;/nav&gt;
+
+&lt;h4 id=&#34;generate-a-barcode-and-save-image-to-local-disk&#34;&gt;&lt;strong&gt;Generate a Barcode and Save Image to Local Disk&lt;/strong&gt;&lt;/h4&gt;
+
+
+
+
+
+&lt;nav&gt;
+  &lt;div class=&#34;book-tabs nav nav-tabs&#34; id=&#34;nav-tab&#34; role=&#34;tablist&#34;&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-4&#34; id=&#34;tabs-4-1&#34; checked=&#34;checked&#34; /&gt;
+      &lt;label for=&#34;tabs-4-1&#34;&gt;C#&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/a42ed26a4fa09288bc1c307447715c23.js&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-4&#34; id=&#34;tabs-4-2&#34;  /&gt;
+      &lt;label for=&#34;tabs-4-2&#34;&gt;Java&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/ba7461ee97f8e3a65b07b86a9a01a873.js&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+      &lt;input type=&#34;radio&#34; class=&#34;toggle&#34; name=&#34;tabs-4&#34; id=&#34;tabs-4-3&#34;  /&gt;
+      &lt;label for=&#34;tabs-4-3&#34;&gt;Python&lt;/label&gt;
+      &lt;div class=&#34;book-tabs-content markdown-inner&#34;&gt;&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/aspose-cloud/7dd7c6f477aeb4eabd1afc57e6913ccd.js?file=Example-GenerateBarcodeAndSaveImageToLocalDisk.php&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;&lt;/div&gt;
+&lt;/nav&gt;
+
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Developer-Guide: Customize Barcode Appearance</title>
+      <link>https://aspose-barcode-cloud.github.io/customize-barcode-appearance/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://aspose-barcode-cloud.github.io/customize-barcode-appearance/</guid>
+      <description>
+        
+        
+        &lt;p&gt;In the present article, you can find details about customizing various parameters of barcodes to be generated, such as barcode label size, rotation angle, barcode paddings, and barcode image borders.&lt;/p&gt;
+&lt;h2 id=&#34;overview&#34;&gt;&lt;strong&gt;Overview&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Aspose.BarCode for Cloud&lt;/strong&gt;&lt;/em&gt; provides class &lt;em&gt;BarcodeGenerator&lt;/em&gt; to generate barcodes in line with the predefined settings so that each element of a barcode image gets its fixed position relative to other elements, as shown in the scheme below. A barcode label comprises the following parts: barcode text, bars, top and bottom captions, image borders, and paddings. All elements besides barcode bars are optional.&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;&lt;img src=&#34;barcode_view_scheme.png&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;barcode-image-sizing-modes&#34;&gt;&lt;strong&gt;Barcode Image Sizing Modes&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;In general, &lt;em&gt;&lt;strong&gt;Aspose.BarCode for Cloud&lt;/strong&gt;&lt;/em&gt; defines barcode image size in terms of height and width automatically. The library enables developers to manage image size settings manually by determining the height and width of barcode labels through &lt;em&gt;setImageHeight(Unit value)&lt;/em&gt; and &lt;em&gt;setImageWidth(Unit value)&lt;/em&gt; methods of class &lt;em&gt;BaseGenerationParameters&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Barcode image size can be varied by using various sizing modes that can be enabled using the &lt;em&gt;AutoSizeMode&lt;/em&gt; enum of class &lt;em&gt;BaseGenerationParameters&lt;/em&gt;. &lt;em&gt;AutoSizeMode&lt;/em&gt; provides the following options: &lt;em&gt;None&lt;/em&gt;, &lt;em&gt;Nearest&lt;/em&gt;, and &lt;em&gt;Interpolation&lt;/em&gt;. In &lt;em&gt;Interpolation&lt;/em&gt; and &lt;em&gt;Nearest&lt;/em&gt; modes, barcode image size is managed based on the values of width and height, and other parameters are ignored. In turn, when the &lt;em&gt;None&lt;/em&gt; mode is enabled, barcode image size is defined ignoring width and height; instead, other parameters, such as &lt;em&gt;XDimension&lt;/em&gt;, are used. &lt;em&gt;AutoSizeMode&lt;/em&gt; takes the &lt;em&gt;None&lt;/em&gt; value by default.&lt;/p&gt;
+&lt;p&gt;Further in the article, different barcode sizing modes are discussed.&lt;/p&gt;
+&lt;h3 id=&#34;autosizemodenone&#34;&gt;&lt;strong&gt;AutoSizeMode.None&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;Setting the &lt;em&gt;None&lt;/em&gt; mode implies that barcode image size is managed based on different parameters ignoring width and height. To specify barcode size, class &lt;em&gt;BarcodeParameters&lt;/em&gt; provides a special method called &lt;em&gt;setXDimension&lt;/em&gt;. It is used to define the minimum size of bars in 1D barcodes or cells in 2D barcodes. Other barcode sizing parameters are calculated based on the &lt;em&gt;XDimension&lt;/em&gt; value.&lt;/p&gt;
+&lt;p&gt;Various barcode standards often determine &lt;em&gt;XDimension&lt;/em&gt; to provide compatibility between printing and scanning equipment units so that barcode images could be captured by scanners used in various companies. &lt;em&gt;XDimension&lt;/em&gt; is related to the data density of a barcode type, meaning that it determines the amount of data that can be encoded in one barcode. Setting a small value of &lt;em&gt;XDimension&lt;/em&gt; results in covering less space to place each encoded character in a barcode image. In contrast, setting a bigger value of &lt;em&gt;XDimension&lt;/em&gt; leads to enlarging the area required to encode each character and decreasing the number of characters per inch.&lt;/p&gt;
+&lt;p&gt;The barcode label shown below has been generated using the &lt;em&gt;None&lt;/em&gt; mode.&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;&lt;img src=&#34;autosizemodenone.png&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;autosizemodeinterpolation&#34;&gt;&lt;strong&gt;AutoSizeMode.Interpolation&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;Setting &lt;em&gt;AutoSizeMode.INTERPOLATION&lt;/em&gt; means that only the values specified using &lt;em&gt;setImageHeight&lt;/em&gt; and &lt;em&gt;setImageWidth&lt;/em&gt; methods are used in barcode sizing. In this case, barcode image size is determined using the manually specified values of height and width even when it results in producing distorted barcode proportions and the deterioration of barcode readability. The &lt;em&gt;Interpolation&lt;/em&gt; mode is appropriate to create barcode images with a resolution of 300 dpi or higher. Such resolution settings will allow keeping barcode distortions negligible and avoiding the deterioration of barcode readability.&lt;/p&gt;
+&lt;p&gt;The barcode label generated through the &lt;em&gt;Interpolation&lt;/em&gt; mode is demonstrated below.&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;&lt;img src=&#34;autosizemodeinterpolation.png&#34;&gt;&lt;/p&gt; 
+&lt;h3 id=&#34;autosizemodenearest&#34;&gt;&lt;strong&gt;AutoSizeMode.Nearest&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;To set barcode image size, the &lt;em&gt;Nearest&lt;/em&gt; mode uses only the values specified using &lt;em&gt;setImageHeight&lt;/em&gt; and &lt;em&gt;setImageWidth&lt;/em&gt; methods similarly to the &lt;em&gt;Interpolation&lt;/em&gt; mode. In this mode, &lt;em&gt;BarcodeGenerator&lt;/em&gt; aims at finding the most suitable image size to avoid barcode proportion distortion and readability deterioration.&lt;/p&gt;
+&lt;p&gt;The barcode label created through the &lt;em&gt;Nearest&lt;/em&gt; mode is provided below.&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;&lt;img src=&#34;autosizemodenearest.png&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;barcode-rotation&#34;&gt;&lt;strong&gt;Barcode Rotation&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;In &lt;em&gt;&lt;strong&gt;Aspose.BarCode for Cloud&lt;/strong&gt;&lt;/em&gt;, barcode image rotation can be set through the &lt;em&gt;setRotationAngle&lt;/em&gt; method of class &lt;em&gt;BaseGenerationParameters&lt;/em&gt;. Passing a value in degrees to this method allows generating a barcode image rotated at the desired angle clockwise or counterclockwise.&lt;/p&gt;
+&lt;p&gt;The sample barcode labels rotated by various angles are shown below.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Rotation Angle&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Is Set to +90°&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Is Set to -90°&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Is Set to +45°&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Is Set to -45°&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Is Set to 180°&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;rotationangle+90.png&#34;&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;rotationangle-90.png&#34;&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;rotationangle+45.png&#34;&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;rotationangle-45.png&#34;&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;rotationangle180.png&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;customizing-barcode-borders-and-padding&#34;&gt;&lt;strong&gt;Customizing Barcode Borders and Padding&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Aspose.BarCode for Cloud&lt;/strong&gt;&lt;/em&gt; allows customizing barcode image borders and paddings. Corresponding methods are described further.&lt;/p&gt;
+&lt;h3 id=&#34;border-settings&#34;&gt;&lt;strong&gt;Border Settings&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;Applying default border settings results in generating barcode images without borders. Alternatively, they can be defined manually using five styles: solid, dotted, dashed, dash-dot, and dash-dot-dot. The border style can be modified using class &lt;em&gt;BorderParameters&lt;/em&gt;. In addition, this class allows setting border thickness in any available units and colors through &lt;em&gt;setWidth&lt;/em&gt; and &lt;em&gt;setColor&lt;/em&gt; methods. Border styles can be changed using the &lt;em&gt;setDashStyle&lt;/em&gt; method of the same class.&lt;/p&gt;
+&lt;p&gt;Barcode labels demonstrated below have been generated using different border styles.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Border Style&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Solid&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Dashed&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Dotted&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Dash-Dot&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Dash-Dot-Dot&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;bordersolid.png&#34;&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;borderdash.png&#34;&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;borderdot.png&#34;&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;borderdashdot.png&#34;&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;borderdashdotdot.png&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;paddings&#34;&gt;&lt;strong&gt;Paddings&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;Paddings from the edges of a barcode image or its borders can be set in four directions using a special class called &lt;em&gt;Aspose.BarCode.Generation.Padding&lt;/em&gt; and its methods: &lt;em&gt;setLeft&lt;/em&gt;, &lt;em&gt;setRight&lt;/em&gt;, &lt;em&gt;setTop&lt;/em&gt;, and &lt;em&gt;setBottom&lt;/em&gt;. By default, padding values are 5 points in all directions.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Padding&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Millimeters&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Pixels&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;padding10millimeters.png&#34;&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;padding10pixels.png&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;bar-width-reduction&#34;&gt;&lt;strong&gt;Bar Width Reduction&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;The other important property that needs to be determined accurately is bar width. Setting an appropriate value of this parameter is critical to assure successful barcode scanning. Due to the so-called ink floating phenomenon, some barcode printing techniques may result in increasing actual bar width after printing out barcode images. This happens often in commercial printing in cases when conventional printing presses are used. To ensure that printed barcode images will be printed out with appropriate bar width, setting a bar width reduction value may be required.&lt;/p&gt;
+&lt;p&gt;Bar width reduction (BWR) is a way to mitigate the effect of ink floating in a graphic design file of a barcode. &lt;em&gt;&lt;strong&gt;Aspose.BarCode for Cloud&lt;/strong&gt;&lt;/em&gt; allows modifying bar width through the &lt;em&gt;setBarWidthReduction&lt;/em&gt; method of class &lt;em&gt;BarcodeParameters&lt;/em&gt;. Passing the required value while calling this method allows decreasing bar width in 1D barcodes or cell size in 2D barcodes. To find out the suitable BWR value for a printer, it is necessary to check special tables provided by printer manufacturers. Modifying this parameter is not applicable to laser printers.&lt;/p&gt;
+&lt;p&gt;The sample barcodes shown below have been generated with and without applying bar width reduction.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Barcode Type&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Bar Width Reduction 0&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Bar Width Reduction 3&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;strong&gt;Code 128&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;code128barwidthreduction0.png&#34; width=&#34;50%&#34; height=&#34;50%&#34;&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;code128barwidthreduction3.png&#34; width=&#34;50%&#34; height=&#34;50%&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;strong&gt;Data Matrix&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;datamatrixbarwidthreduction0.png&#34; width=&#34;50%&#34; height=&#34;50%&#34;&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;datamatrixbarwidthreduction4.png&#34; width=&#34;50%&#34; height=&#34;50%&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Developer-Guide: Manage Barcode Parameters</title>
+      <link>https://aspose-barcode-cloud.github.io/advanced-barcode-features/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://aspose-barcode-cloud.github.io/advanced-barcode-features/</guid>
+      <description>
+        
+        
+        &lt;p&gt;This article describes how to manage settings provided by &lt;em&gt;&lt;strong&gt;Aspose.BarCode for Cloud&lt;/strong&gt;&lt;/em&gt; to adjust barcode measurement units (millimeters, inches, points, or pixels) and barcode image resolution.&lt;/p&gt;
+&lt;h2 id=&#34;overview&#34;&gt;&lt;strong&gt;Overview&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;Cartesian coordinate systems use coordinates of pixels or drawable objects to represent image data for raster or vector images. To link these coordinates to real-world measurement units, such as millimeters or inches, &lt;em&gt;&lt;strong&gt;Aspose.BarCode for Cloud&lt;/strong&gt;&lt;/em&gt; includes a special class called &lt;em&gt;Unit&lt;/em&gt; and its method called &lt;em&gt;updateResolution&lt;/em&gt; that is intended to manage barcode resolution measured in dots per inch (dpi). Class &lt;em&gt;Unit&lt;/em&gt; provides various methods that serve to convert barcode size values defined in pixels, millimeters, inches, or points to any of the supported measurement units automatically. In this way, the size of elements in real-world measurement units can be converted into pixels to generate barcode images.&lt;/p&gt;
+&lt;h2 id=&#34;measuring-barcode-size-in-various-units&#34;&gt;&lt;strong&gt;Measuring Barcode Size in Various Units&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;Class &lt;em&gt;Unit&lt;/em&gt; allows developers to manage measurement units for barcode parameters and can be modified using special methods of class &lt;em&gt;BarcodeParameters&lt;/em&gt;, such as &lt;em&gt;setBarCodeHeight&lt;/em&gt;, &lt;em&gt;setBarCodeWidth&lt;/em&gt;, and &lt;em&gt;setXDimension&lt;/em&gt;. &lt;em&gt;&lt;strong&gt;Aspose.BarCode for Cloud&lt;/strong&gt;&lt;/em&gt; determines measurement units in the &lt;em&gt;GraphicsUnit&lt;/em&gt; enum that is defined as an internal representation of a Java interface called &lt;strong&gt;java.lang.Comparable&lt;GraphicsUnit&gt;&lt;/strong&gt;. Class &lt;em&gt;Unit&lt;/em&gt; can be used to convert measurement units into the desired ones: &lt;em&gt;Millimeters&lt;/em&gt;, &lt;em&gt;Pixels&lt;/em&gt;, &lt;em&gt;Inches&lt;/em&gt;, &lt;em&gt;Point&lt;/em&gt; (1/72 inch), or &lt;em&gt;Document&lt;/em&gt; (1/300 inch). By default, &lt;em&gt;Millimeters&lt;/em&gt; are used as size measurement units.&lt;/p&gt;
+&lt;p&gt;Barcode labels created using various unit settings are shown below.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Size Units&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Pixels&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Millimeters&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;image src=&#34;unitin3pixels.png&#34;&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;image src=&#34;unitin2millimeters.png&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;image-resolution&#34;&gt;&lt;strong&gt;Image Resolution&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Aspose.BarCode for Cloud&lt;/strong&gt;&lt;/em&gt; allows developers to customize barcode image resolution settings using class &lt;em&gt;Unit&lt;/em&gt;. This class includes the &lt;em&gt;updateResolution&lt;/em&gt; method to modify barcode image resolution and the &lt;em&gt;setPixels&lt;/em&gt; method to convert all non-pixel size measurements into digital coordinates in pixels. To convert size values into requested supported units, special methods can be used: &lt;em&gt;setInches&lt;/em&gt;, &lt;em&gt;setMillimeters&lt;/em&gt;, &lt;em&gt;setDocument&lt;/em&gt;, &lt;em&gt;setPoint&lt;/em&gt;, and &lt;em&gt;setPixels&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Barcode images with different resolution settings are given below.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Resolution&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Is Set to 96 dpi&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Is Set to 300 dpi&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;image src=&#34;unitin1millimeterresolution96.png&#34;&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;image src=&#34;unitin1millimeterresolution300.png&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Developer-Guide: Adjust Barcode Text and Captions</title>
+      <link>https://aspose-barcode-cloud.github.io/manage-barcode-text/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://aspose-barcode-cloud.github.io/manage-barcode-text/</guid>
+      <description>
+        
+        
+        &lt;p&gt;This article describes how to work with text placed on barcode images. &lt;em&gt;&lt;strong&gt;Aspose.BarCode for Cloud&lt;/strong&gt;&lt;/em&gt; enables customizing various parameters of barcode text: visibility, font, spacings, text location, and wrapping modes.&lt;/p&gt;
+&lt;h2 id=&#34;overview&#34;&gt;&lt;strong&gt;Overview&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Aspose.BarCode for Cloud&lt;/strong&gt;&lt;/em&gt; allows developers to add human-readable text on barcode images in three different forms shown in the scheme below: main text label, top caption, and bottom caption. Any of these elements can be placed optionally or hidden.&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;&lt;img src=&#34;barcode_text_scheme.png&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;barcode-text&#34;&gt;&lt;strong&gt;Barcode Text&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;The main barcode text label contains short text information detached from bars by spacings. This text label can take six positions, as explained in the figure below: top center, top left, top right, bottom center, bottom left, or bottom right.&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;&lt;img src=&#34;codetext_scheme.png&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;text-visibility&#34;&gt;&lt;strong&gt;Text Visibility&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Aspose.BarCode for Cloud&lt;/strong&gt;&lt;/em&gt; allows developers to visualize or hide barcode text. If there is no need to put human-readable text on a barcode image, barcode images can be generated without text labels, as shown in the example below.&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;&lt;img src=&#34;codetexthide.png&#34;&gt;&lt;/p&gt;  
+&lt;h3 id=&#34;text-positioning&#34;&gt;&lt;strong&gt;Text Positioning&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;The position of a barcode text label can be modified by customizing two parameters: alignment and location. These parameters can be adjusted through &lt;em&gt;setLocation&lt;/em&gt; and &lt;em&gt;setAlignment&lt;/em&gt; methods of class &lt;em&gt;CodetextParameters&lt;/em&gt;.&lt;/p&gt;
+&lt;h4 id=&#34;location&#34;&gt;&lt;strong&gt;Location&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;The &lt;em&gt;setLocation&lt;/em&gt; method allows setting the vertical position of a text label, namely, placing it above or below bars, as shown in the figures below. The default setting is &lt;em&gt;Below&lt;/em&gt;.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Text Location&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Above Barcode&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Below Barcode&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;codetextlocationabove.png&#34;&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;codetextlocationbelow.png&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4 id=&#34;alignment&#34;&gt;&lt;strong&gt;Alignment&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;The &lt;em&gt;setAlignment&lt;/em&gt; method is used to set the horizontal position of a text label in a barcode image: right-side, left-side, or center, as illustrated in the figures below. The default setting of barcode text alignment is &lt;em&gt;Center&lt;/em&gt;.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Text Alignment&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Left&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Center&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Right&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;codetextaligmentleft.png&#34;&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;codetextaligmentcenter.png&#34;&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;codetextaligmentright.png&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;spacing-between-bars-and-text-label&#34;&gt;&lt;strong&gt;Spacing between Bars and Text Label&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;The default spacing (gap) between bars and a text label is equal to 2pt. It is possible to modify this spacing using the &lt;em&gt;setSpace&lt;/em&gt; method of class &lt;em&gt;CodetextParameters&lt;/em&gt;. This method is not applicable to several barcode types, including EAN 13, EAN 8, UPC-E, UPC-A, ISMN, ISBN, ISSN, and UpcaGs1DatabarCoupon.&lt;/p&gt;
+&lt;p&gt;Sample barcode images shown below have been created with various spacing settings (five and forty pixels).&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Text Spacing&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Is Set to 5 Pixels&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Is Set to 40 Pixels&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;codetextspace5pixels.png&#34;&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;codetextspace40pixels.png&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;font-settings&#34;&gt;&lt;strong&gt;Font Settings&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;To manage barcode text font, &lt;em&gt;&lt;strong&gt;Aspose.BarCode for Cloud&lt;/strong&gt;&lt;/em&gt; provides &lt;em&gt;setFont&lt;/em&gt; and &lt;em&gt;setFontMode&lt;/em&gt; methods of class &lt;em&gt;CodetextParameters&lt;/em&gt;. The default font setting is Arial 5pt regular. This setting is ignored if the &lt;em&gt;Auto&lt;/em&gt; mode is enabled using the &lt;em&gt;setFontMode&lt;/em&gt; method. This method is used to manage font size settings automatically. If it is called passing the &lt;em&gt;Auto&lt;/em&gt; value, font size is determined automatically based on &lt;em&gt;xDimension&lt;/em&gt; in such a way that the text label should take only one text line. &lt;em&gt;FontMode.AUTO&lt;/em&gt; is recommended when &lt;em&gt;AutoSizeMode.NEAREST&lt;/em&gt; or &lt;em&gt;AutoSizeMode.INTERPOLATION&lt;/em&gt; settings are enabled. Alternatilvely, setting &lt;em&gt;FontMode.MANUAL&lt;/em&gt; allows managing font size manually. Other font parameters, including font style, are set similarly in both &lt;em&gt;Auto&lt;/em&gt; and &lt;em&gt;Manual&lt;/em&gt; modes.&lt;/p&gt;
+&lt;p&gt;Barcode images shown below have been created with these two font modes.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Font Setting Mode&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Auto&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Manual&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;codetextfontmodeauto.png&#34;&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;codetextfontmodemanual.png&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;nowrap-mode-for-text&#34;&gt;&lt;strong&gt;NoWrap Mode for Text&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;It is possible to avoid line breaks in a text that is too long for a single row using the &lt;em&gt;setNoWrap&lt;/em&gt; method of class &lt;em&gt;CodetextParameters&lt;/em&gt;. When the &lt;em&gt;True&lt;/em&gt; setting is enabled, the text label is displayed in a single row regardless of the text length. The default setting is &lt;em&gt;False&lt;/em&gt;. Barcode images shown below have been created with different &lt;em&gt;NoWrap&lt;/em&gt; settings.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Text Wrapping Mode&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Wrap&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;No Wrap&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;codetextlongtextwrap.png&#34;&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;codetextlongtextnowrap.png&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;replacing-barcode-text-in-2d-barcodes&#34;&gt;&lt;strong&gt;Replacing Barcode Text in 2D Barcodes&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;To replace barcode text in 2D barcodes with some other text label with improved readability without modifications to the barcode image itself, it is possible to call the &lt;em&gt;setTwoDDisplayText&lt;/em&gt; method of class &lt;em&gt;CodetextParameters&lt;/em&gt; and pass new text to be placed. This is applicable to selected 2D symbologies, including QR Code, Aztec Code, Data Matrix, MaxiCode, PDF417, and DotCode.&lt;/p&gt;
+&lt;p&gt;The sample barcode image shown below has been created using the &lt;em&gt;TwoDDisplayText&lt;/em&gt; setting.&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;&lt;img src=&#34;codetexttwoddisplaytext.png&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;caption&#34;&gt;&lt;strong&gt;Caption&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Aspose.BarCode for Cloud&lt;/strong&gt;&lt;/em&gt; allows developers to place additional text labels in a barcode image in form of captions above and below barcodes. As demonstrated in the figure below, such text captions have a parameter called &lt;em&gt;Padding&lt;/em&gt; that allows modifying spacing size between captions and the nearest element (barcodes, main text label, or borders). Both text captions are disabled by default. If required, they can be shown by one or both simultaneously.&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;&lt;img src=&#34;caption_scheme.png&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;caption-visibility&#34;&gt;&lt;strong&gt;Caption Visibility&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;As stated above, additional text captions &lt;em&gt;CaptionAbove&lt;/em&gt; and &lt;em&gt;CaptionBelow&lt;/em&gt; are disabled by default. When required, top and bottom caption labels can be shown independently from each other or enabled simultaneously. The &lt;em&gt;setVisible&lt;/em&gt; method of class &lt;em&gt;CaptionParameters&lt;/em&gt; can be used to display one or two captions. Then, caption text can be inserted through the &lt;em&gt;setText&lt;/em&gt; method. If required, caption labels can replace main text in 1D barcodes by enabling the former and disabling the latter. The figures given below demonstrate how to caption positioning options.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Caption Visibility&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Above&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Below&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;captionvisibleabove.png&#34;&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;captionvisiblebelow.png&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;text-positioning-1&#34;&gt;&lt;strong&gt;Text Positioning&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;The &lt;em&gt;setAlignment&lt;/em&gt; method of class &lt;em&gt;CaptionParameters&lt;/em&gt; allows modifying horizontal positions of caption labels in three directions: right, left, and center. The default position of captions is center. The figures shown below demonstrate barcode images with the top caption label with different alignment positions.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Caption Alignment&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Left&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Center&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Right&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;captionalignmentleft.png&#34;&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;captionalignmentcenter.png&#34;&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;captionalignmentright.png&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;caption-padding&#34;&gt;&lt;strong&gt;Caption Padding&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;The &lt;em&gt;setPadding&lt;/em&gt; method of class &lt;em&gt;CaptionParameters&lt;/em&gt; can be used to manage spacings for text captions. By default, the spacing value is set to {5pt; 5pt; 0; 5pt} for the top caption and {0; 5pt; 5pt; 5pt} for the bottom one according to the standard Rectangle setting {Top, Left, Bottom, Right}. This method is inapplicable when captions are disabled. Barcode images shown below have been generated with different padding settings.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Caption Padding&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Is Set to 5 Pixels&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Is Set to 40 Pixels&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;captionpadding5pixels.png&#34;&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;captionpadding40pixels.png&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;caption-font&#34;&gt;&lt;strong&gt;Caption Font&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Aspose.BarCode for Cloud&lt;/strong&gt;&lt;/em&gt; does not enable automatic font size settings based on barcode size. Accordingly, caption font size requires manual setting. For top and bottom captions, various parameters, including font style and size can be set independently. Caption font can be customized through special methods of class &lt;em&gt;FontUnit&lt;/em&gt;. The default setting for caption font is Arial 8pt regular.
+The barcode image shown below explains different caption font settings.&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;&lt;img src=&#34;captionfont.png&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;nowrap-mode-for-caption&#34;&gt;&lt;strong&gt;NoWrap Mode for Caption&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;The &lt;em&gt;setNoWrap&lt;/em&gt; method of class &lt;em&gt;CaptionParameters&lt;/em&gt; allows disabling text line breaks when a text string is too large to fit in one line. When this method is called passing the &lt;em&gt;True&lt;/em&gt; value, caption text is always displayed as a single line. Barcode images below show the difference between &lt;em&gt;setNoWrap.TRUE&lt;/em&gt; and &lt;em&gt;setNoWrap.FALSE&lt;/em&gt; settings.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Caption Wrapping&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Is Set to &lt;em&gt;Wrap&lt;/em&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Is Set to &lt;em&gt;No Wrap&lt;/em&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;captiontextwrap.png&#34;&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;captiontextnowrap.png&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Developer-Guide: Customize Barcode Color</title>
+      <link>https://aspose-barcode-cloud.github.io/manage-barcode-color/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://aspose-barcode-cloud.github.io/manage-barcode-color/</guid>
+      <description>
+        
+        
+        &lt;p&gt;In this article, the options available in &lt;em&gt;&lt;strong&gt;Aspose.BarCode for Cloud&lt;/strong&gt;&lt;/em&gt; to manage barcode color scheme and its key elements are described.&lt;/p&gt;
+&lt;h2 id=&#34;overview&#34;&gt;&lt;strong&gt;Overview&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;Usually, barcode images have a black-and-white color scheme. To provide the possibility of modifying barcode colors, &lt;em&gt;&lt;strong&gt;Aspose.BarCode for Cloud&lt;/strong&gt;&lt;/em&gt; enables customizing system RGB colors for key barcode elements, including the following:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Bars&lt;/li&gt;
+&lt;li&gt;Background&lt;/li&gt;
+&lt;li&gt;Text label&lt;/li&gt;
+&lt;li&gt;Top and bottom captions&lt;/li&gt;
+&lt;li&gt;Borders&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;background-color&#34;&gt;&lt;strong&gt;Background Color&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;Barcode background color can be modified through the &lt;em&gt;setBackColor&lt;/em&gt; method of &lt;em&gt;BaseGenerationParameters&lt;/em&gt; class. The default value of background color is &lt;em&gt;White&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;The barcode image with background color set to &lt;em&gt;Color.Green&lt;/em&gt; is provided below.&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;&lt;image src=&#34;colorbackground.png&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;bar-color&#34;&gt;&lt;strong&gt;Bar Color&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;To manage the color of bars, the &lt;em&gt;setBarColor&lt;/em&gt; method of &lt;em&gt;BarcodeParameters&lt;/em&gt; class needs to be used. By default, the bar color is set to &lt;em&gt;Black&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;The barcode image below has been generated with the bar color setting &lt;em&gt;Color.Green&lt;/em&gt;.&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;&lt;image src=&#34;colorbarcode.png&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;border-color&#34;&gt;&lt;strong&gt;Border Color&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;Barcode border color can be adjusted through the &lt;em&gt;setColor&lt;/em&gt; method of class &lt;em&gt;BorderParameters&lt;/em&gt;. The default border color is &lt;em&gt;Black&lt;/em&gt;. The barcode image below has been generated with border color set to &lt;em&gt;Color.Green&lt;/em&gt;.&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;&lt;image src=&#34;colorborder.png&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;main-text-color&#34;&gt;&lt;strong&gt;Main Text Color&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Aspose.BarCode for Cloud&lt;/strong&gt;&lt;/em&gt; provides the possibility to customize the color of the main text label displayed on a barcode image. It can be done by calling the &lt;em&gt;setColor&lt;/em&gt; method of class &lt;em&gt;CodeTextParameters&lt;/em&gt;. The default setting of the main text color is &lt;em&gt;Black&lt;/em&gt;. The sample barcode image shown below has been generated with the customized barcode text color setting (&lt;em&gt;Color.Green&lt;/em&gt;).&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;&lt;image src=&#34;colorcodetext.png&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;caption-color&#34;&gt;&lt;strong&gt;Caption Color&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;In &lt;em&gt;&lt;strong&gt;Aspose.BarCode for Cloud&lt;/strong&gt;&lt;/em&gt;, barcode images can be generated with top and bottom captions. Caption color can be customized using the &lt;em&gt;setTextColor&lt;/em&gt; method of class &lt;em&gt;CaptionParameters&lt;/em&gt;. Sample images below have been created with the color setting set to &lt;em&gt;Color.Green&lt;/em&gt;.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;Caption Color&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;image src=&#34;colorcaptionabove.png&#34;&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;image src=&#34;colorcaptionbelow.png&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Developer-Guide: Save Generated Barcodes</title>
+      <link>https://aspose-barcode-cloud.github.io/save-barcodes-in-cloud/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://aspose-barcode-cloud.github.io/save-barcodes-in-cloud/</guid>
+      <description>
+        
+        
+        &lt;p&gt;This article outlines the ways of outputting generated barcode images as files, streams, or bitmaps, as well as various raster (PNG, JPEG, BMP, GIF, and TIFF) and vector (SVG and EMF) image file formats.&lt;/p&gt;
+&lt;h2 id=&#34;overview&#34;&gt;&lt;strong&gt;Overview&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;During barcode generation, it may be required to save barcode images not only in common raster image formats but also as streams or vector files. &lt;em&gt;&lt;strong&gt;Aspose.BarCode for Cloud&lt;/strong&gt;&lt;/em&gt; enables different options for saving generated barcodes: five common image formats, two vector formats, and some other ways, such as outputting barcode labels to a file, stream, or a bitmap). These options are discussed further.&lt;/p&gt;
+&lt;h2 id=&#34;save-barcode-to-file&#34;&gt;&lt;strong&gt;Save Barcode to File&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Aspose.BarCode for Cloud&lt;/strong&gt;&lt;/em&gt; enables saving generated barcode images as files in the desired format.
+The code sample given below explains how to use this setting.&lt;/p&gt;
+&lt;h2 id=&#34;save-barcode-to-stream&#34;&gt;&lt;strong&gt;Save Barcode to Stream&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;It may be necessary to output generated barcode images in the form of a stream, in other words, in a binary format. A stream can be viewed as a byte sequence abstraction. To save barcode images as streams, class &lt;em&gt;BarcodeGenerator&lt;/em&gt; provides the public method &lt;em&gt;save(java.io.OutputStream stream, BarCodeImageFormat format)&lt;/em&gt; that takes &lt;em&gt;Stream&lt;/em&gt; as an input parameter, as shown in the code snippet below.&lt;/p&gt;
+&lt;h2 id=&#34;save-barcode-as-bitmap&#34;&gt;&lt;strong&gt;Save Barcode as Bitmap&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Aspose.BarCode for Cloud&lt;/strong&gt;&lt;/em&gt; enables saving barcode images in the form of bitmap objects and then converting it to the required format or using it in graphical transformations. These objects can be fetched from instances of class &lt;em&gt;BarcodeGenerator&lt;/em&gt; through the &lt;em&gt;generateBarCodeImage&lt;/em&gt; method and then processed further.&lt;/p&gt;
+&lt;h2 id=&#34;raster-image-formats&#34;&gt;&lt;strong&gt;Raster Image Formats&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;In &lt;em&gt;&lt;strong&gt;Aspose.BarCode for Cloud&lt;/strong&gt;&lt;/em&gt;, barcode images can be saved to common raster image formats, namely, PNG, GIF, BMP, JPEG, and TIFF. The value of the &lt;em&gt;BarCodeImageFormat&lt;/em&gt; enum can be passed as the second argument to the &lt;em&gt;save(java.lang.String filename, BarCodeImageFormat format)&lt;/em&gt; method to output barcode images in the specified format. The description of all supported image formats is given further.&lt;/p&gt;
+&lt;h3 id=&#34;bmp-format&#34;&gt;&lt;strong&gt;BMP Format&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;BMP images are bitmap files that store bitmap digital images regardless of a graphics adapter. The BMP file format enables storing information as two-dimensional digital images in monochrome and color formats with different color depths. Using the BMP format for image generation results in producing images without compression. In this case, barcode images will have a large size and 24-bit color depth. Moreover, they will not contain losses and artifacts.&lt;/p&gt;
+&lt;p&gt;The sample BMP barcode image is given below.&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;&lt;image src=&#34;rasterimagebmp.bmp&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;png-format&#34;&gt;&lt;strong&gt;PNG Format&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;Portable Network Graphics (PNG) is a raster image format that is used for lossless data compression. This format is the most preferable to generate barcode labels. Images created using this format have 32-bit color depth and no losses.&lt;/p&gt;
+&lt;p&gt;The sample barcode image in the PNG format is provided below.&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;&lt;image src=&#34;rasterimagebmp.bmp&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;gif-format&#34;&gt;&lt;strong&gt;GIF Format&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;Graphics Interchange Format (GIF) is a lossless raster file format that supports only 256 colors and enables creating both static and animated images. &lt;em&gt;&lt;strong&gt;Aspose.BarCode for Cloud&lt;/strong&gt;&lt;/em&gt; allows using this format only for black and white raster images. The code following code snippet explains how to generate barcodes in the GIF format.&lt;/p&gt;
+&lt;p&gt;The GIF barcode image generated using this code is shown below.&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;&lt;image src=&#34;rasterimagegif.gif&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;jpeg-format&#34;&gt;&lt;strong&gt;JPEG Format&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;JPEG is a common image file format used for lossy and compressed image data. As a result of compression, generating JPEG images require finding a trade-off between image quality and storage size and therefore often have artifacts and graphical noises. This file format is not recommended for barcode generation. The following code sample shows how to create JPEG barcode images.&lt;/p&gt;
+&lt;p&gt;The example of a JPEG barcode image is given below.&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;&lt;image src=&#34;rasterimagejpeg.jpeg&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;tiff-tiffincmyk-format&#34;&gt;&lt;strong&gt;TIFF (TIFFInCMYK) Format&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;Tagged Image File Format (TIFF) is a lossless raster image format that allows creating images of very high quality and 32-bit color. Only a variation of this format, TIFFInCMYK, supports the CMYK color scheme. The code snippet provided below explains how to generate barcode images in the TIFF format.&lt;/p&gt;
+&lt;p&gt;TIFF and TIFFInCMYK barcode images are given below.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Output Format&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;TIFF&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;TIFFInCMYK&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;a href=&#34;rasterimagetiff.tiff&#34;&gt;&lt;img src=&#34;rasterimagepng.png&#34; alttext=&#34;Saving to TIFF format&#34;&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;a href=&#34;rasterimagetiffincmyk.tiff&#34;&gt;&lt;img src=&#34;rasterimagepng.png&#34; alttext=&#34;Saving to TIFFInCMYK format&#34;&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;vector-image-formats&#34;&gt;&lt;strong&gt;Vector Image Formats&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;Vector image formats represent images as a set of graphical operations executed consequently on a graphics unit. Vector images can be generated through mathematical formulas that specify points on a grid. This format allows scaling without resolution losses. Accordingly, vector image formats may be more suitable than raster ones in some cases. &lt;em&gt;&lt;strong&gt;Aspose.BarCode for Cloud&lt;/strong&gt;&lt;/em&gt; supports outputting barcode images in two vector formats: EMF and SVG.&lt;/p&gt;
+&lt;h3 id=&#34;emf-format&#34;&gt;&lt;strong&gt;EMF Format&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;Enhanced Metafile (EMF) is a vector image format that is device-independent and is commonly used in Windows operating systems for printing tasks. An EMF image file comprises variable-length records in chronological order. Then, a vector image can be rendered on any output device. Such records can serve to represent objects, drawing commands, and graphics parameters that are critical to rendering vector images. When a digital device opens an EMF metafile through its graphics environment, dimension parameters, proportions, color scheme, and other graphics properties of the source image do not get altered on any platform.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;vectorimageemf.emf&#34;&gt; &lt;p align=&#34;center&#34;&gt;&lt;img src=&#34;rasterimagepng.png&#34; alttext=&#34;Saving to EMF format&#34;&gt; &lt;/p&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;svg-format&#34;&gt;&lt;strong&gt;SVG Format&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;Scalable Vector Graphics (SVG) corresponds to a vector image format based on XML. It is used to create two-dimensional images in web applications. In SVG images, the image appearance is described in XML text. Such files can be scaled to various size measures keeping resolution quality. Accordingly, this vector image format is suitable for websites and graphics printing owing to its capability to resize images in line with various design requirements.&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;&lt;image src=&#34;vectorimagesvg.svg&#34;&gt;&lt;/p&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Developer-Guide: Set Checksum Controls in 1D Barcodes</title>
+      <link>https://aspose-barcode-cloud.github.io/set-checksum-in-1d-barcodes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://aspose-barcode-cloud.github.io/set-checksum-in-1d-barcodes/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;overview&#34;&gt;&lt;strong&gt;Overview&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;The idea of using &lt;em&gt;checksum&lt;/em&gt; (or &lt;em&gt;check digit&lt;/em&gt;) as an error identification mechanism has been proposed to check for the integrity and accuracy of data encoded in 1D barcodes. A checksum digit can be used to assure that barcode information has not been lost or damaged and guarantee accurate barcode recognition. Generally, a checksum is the last symbol in a barcode sequence encoded as a character. 1D barcodes may include an optional or obligatory checksum digit calculated based on a special algorithm. Barcode scanner decoders perform checksum controls through mathematical operations based on barcode digits preceding the checksum character and then compare the calculation result with the checksum value.&lt;/p&gt;
+&lt;p&gt;Barcodes without obligatory checksum verification comprise self-checking characters. Such barcodes are inherently resistant to errors as any character alteration is viewed as erroneous. Two inconsistent modifications performed in a barcode digit and a scan line simultaneously may lead to inappropriate barcode recognition. This is called substitution error and can be mitigated by using checksum controls.&lt;/p&gt;
+&lt;h2 id=&#34;checksum-definition&#34;&gt;&lt;strong&gt;Checksum Definition&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;Most 1D barcode types have been created in the 70s. For many of them, checksum controls are identified in a simple way: as a sum of all preceding digits modulo the index of the maximum encoded character. As further development, barcode standards introduced at the beginning of the 2000s use more sophisticated checksum verification algorithms.&lt;/p&gt;
+&lt;p&gt;In general, enabling checksum in &lt;em&gt;&lt;strong&gt;Aspose.BarCode for Cloud&lt;/strong&gt;&lt;/em&gt; for 1D barcodes allows verifying barcodes with minor damages. However, in the case of significantly damaged barcode images, the probability of inaccurate recognition increases.&lt;/p&gt;
+&lt;h2 id=&#34;checksum-settings&#34;&gt;&lt;strong&gt;Checksum Settings&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;Different types use particular checksum controls (optional or obligatory) and different checksum calculation algorithms. When checksum controls are obligatory, &lt;em&gt;&lt;strong&gt;Aspose.BarCode for Cloud&lt;/strong&gt;&lt;/em&gt; utilizes the most common algorithm for that symbology. When needed, the checksum character is added as the last barcode character. The &lt;em&gt;EnableChecksum&lt;/em&gt; enum is intended for checksum calculation in 1D barcodes. It is set to &lt;em&gt;Yes&lt;/em&gt; for the types with obligatory checksum controls and &lt;em&gt;No&lt;/em&gt; for those with an optional check digit by default.&lt;/p&gt;
+&lt;p&gt;Barcode standards with optional and obligatory checksum settings are listed below.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Checksum Controls&lt;/th&gt;
+&lt;th&gt;1D Barcode Types&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Optional&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Codabar, Code 39, Italian Post 25, Interleaved 2-of-5, Matrix 2-of-5, MSI, Pharmacode, PatchCode, PZN, Standard 2-of-5&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Obligatory&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Codablock-F, Code 11, Code 128, Code-16K, Code 32, Code 93, DataBar Expanded Stacked, DataBar Expanded, DataBar Omnidirectional, DataBar Stacked Omnidirectional, DataBar Stacked, DataBar Limited, DataBar Truncated, EAN-13, EAN-14, EAN-2, EAN-5, EAN-8, GS1 Codablock-F, GS1 Code 128, IATA 2-of-5, ISBN, ISMN, ISSN, ITF-14, ITF-6, OPC, SSCC-14, SSCC-18, UPC-A, UPC-E, UpcaGs1DatabarCoupon, VIN&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;optional-checksum-controls&#34;&gt;&lt;strong&gt;Optional Checksum Controls&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;Linear barcode types with optional checksum controls do not require check digit calculation by default. For such barcode types, the &lt;em&gt;EnableChecksum&lt;/em&gt; enum provides the following options:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;public static final EnableChecksum DEFAULT&lt;/strong&gt; and &lt;strong&gt;public static final EnableChecksum NO&lt;/strong&gt;. Checksum control is not enabled.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;public static final EnableChecksum YES&lt;/strong&gt;. The checksum algorithm of the most appropriate type for the given symbology is used.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Checksum Controls&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Checksum Enabled&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Checksum Disabled&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;onecscode39withchecksum.png&#34;&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;onecscode39withoutchecksum.png&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;obligatory-checksum-controls&#34;&gt;&lt;strong&gt;Obligatory Checksum Controls&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;For barcode types with obligatory checksum controls, objects of &lt;em&gt;EnableChecksum&lt;/em&gt; can be initialized as follows:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;public static final EnableChecksum DEFAULT&lt;/strong&gt; and &lt;strong&gt;public static final EnableChecksum YES&lt;/strong&gt;. Checksum calculation is performed according to the specific algorithm.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;public static final EnableChecksum NO&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The following barcode image has been generated with obligatory checksum enabled.&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;&lt;img src=&#34;onecscode93withchecksum.png&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;displaying-checksum-for-code-128&#34;&gt;&lt;strong&gt;Displaying Checksum for Code 128&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;For &lt;em&gt;Code 128&lt;/em&gt; and &lt;em&gt;GS1 Code 128&lt;/em&gt;, &lt;em&gt;&lt;strong&gt;Aspose.BarCode for Cloud&lt;/strong&gt;&lt;/em&gt; allows developers to use a specific method called &lt;em&gt;setChecksumAlwaysShow&lt;/em&gt; of class &lt;em&gt;BarcodeParameters&lt;/em&gt;. In this case, the checksum digit is displayed in the &lt;em&gt;CodeText&lt;/em&gt; field as human-readable barcode text.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Checksum Visibility&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Displayed&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Hidden&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;onecscode128showchecksum.png&#34;&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;onecscode128notshowchecksum.png&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>
